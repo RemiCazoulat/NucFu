@@ -1,0 +1,8 @@
+C:\Users\Rémi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Projets\VkNucFu -B C:\Projets\VkNucFu\cmake-build-debug
+-- Including Win32 support
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Documentation generation requires Doxygen 1.9.8 or later
+-- Could NOT find GLM (missing: GLM_INCLUDE_DIR) 
+-- Configuring done (3.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Projets/VkNucFu/cmake-build-debug

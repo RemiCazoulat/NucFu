@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/glfw-populate.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test.rule
+C:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update.rule
