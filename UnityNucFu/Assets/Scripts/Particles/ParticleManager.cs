@@ -33,7 +33,6 @@ namespace Particles
         private ComputeBuffer _magnetsBuffer;
         // Only for arrows
         private ComputeBuffer _arrowsBuffer;
-        private ComputeBuffer _arrowsTrianglesBuffer;
     
         // ----{ ARRAYS FOR COMPUTE BUFFERS }----
         private int[] _verticesNotEmpty; // Only for initialization
@@ -192,8 +191,6 @@ namespace Particles
                 _particles[i] = new Particle(pos + particlePosition, particleDirection, particleCharge, particleMass);
             }
         }
-
-
         private void ReleaseParticlesBuffers()
         {
             _intermediateTrianglesBuffer.Release();
@@ -207,28 +204,22 @@ namespace Particles
             _particlesBuffer = null;
             _verticesBuffer = null;
         }
-
         private void ReleaseMagnetBuffers()
         {
             _magnetsBuffer.Release();
             _magnetsBuffer = null;
         }
-    
         private void ReleaseArrowsBuffers()
         {
             _arrowsBuffer.Release();
-            _arrowsTrianglesBuffer.Release();
             _arrowsBuffer = null;
-            _arrowsTrianglesBuffer = null;
         }
-
         private void ReleaseAllBuffers()
         {
             ReleaseParticlesBuffers();
             ReleaseMagnetBuffers();
             ReleaseArrowsBuffers();
         }
-
         private void Start()
         {
             InitParticles();
@@ -236,7 +227,6 @@ namespace Particles
             if(isArrows) InitArrows();
 
         }
-
         private void FixedUpdate()
         {
             for (var i = 0; i < subStep; i++)
@@ -244,13 +234,52 @@ namespace Particles
                 UpdateParticles();
             }
         }
-    
         private void OnDisable ()
         {
             ReleaseAllBuffers();
         }
-
+        private void OnDrawGizmos()
+        {
+            GizmosDrawing();
+        }
+        private void GizmosDrawing()
+        {
+            Gizmos.color = Color.red;
+            if (_arrows == null)
+            {
+                return;
+            }
+            if (_particles == null)
+            {
+                return;
+            }
+            var pindex = 0;
+            foreach(var p in _particles)
+            {
+                var delta = pindex * (_magnets.Length + 1);
+                for (int i = 0; i <= _magnets.Length; i++)
+                {
+                    var pos1 = p.pos;
+                    var pos2 = _arrows[delta + i];
+                    Gizmos.DrawLine(pos1, pos2);
+                } 
+            }
+        }
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
 }
 
 
