@@ -1,8 +1,34 @@
-C:\Users\Rémi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Projets\VkNucFu -B C:\Projets\VkNucFu\cmake-build-debug
--- Including Win32 support
--- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
--- Documentation generation requires Doxygen 1.9.8 or later
--- Could NOT find GLM (missing: GLM_INCLUDE_DIR) 
--- Configuring done (3.2s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Projets/VkNucFu/cmake-build-debug
+C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\remi.cazoulat\Documents\GitHub\NucFu\VkNucFu -B C:\Users\remi.cazoulat\Documents\GitHub\NucFu\VkNucFu\cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error: The current CMakeCache.txt directory C:/Users/remi.cazoulat/Documents/GitHub/NucFu/VkNucFu/cmake-build-debug/_deps/glfw-subbuild/CMakeCache.txt is different than the directory c:/Projets/VkNucFu/cmake-build-debug/_deps/glfw-subbuild where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+
+CMake Error at C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake:1667 (message):
+  CMake step for glfw failed: 1
+Call Stack (most recent call first):
+  C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake:1819:EVAL:2 (__FetchContent_directPopulate)
+  C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake:1819 (cmake_language)
+  C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FetchContent.cmake:2033 (FetchContent_Populate)
+  CMakeLists.txt:6 (FETCHCONTENT_MAKEAVAILABLE)
+
+
+-- Configuring incomplete, errors occurred!
