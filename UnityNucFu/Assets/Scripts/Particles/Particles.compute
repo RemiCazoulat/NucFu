@@ -41,7 +41,7 @@ RWStructuredBuffer<float3> vertices;
 
 RWStructuredBuffer<mi> magnet;
 
-RWStructuredBuffer<float3> arrows_vertices;
+RWStructuredBuffer<float3> arrows;
 RWStructuredBuffer<int> arrows_triangles;
 
 
@@ -49,8 +49,6 @@ float3 get_midpoint(const float3 p1,const float3 p2)
 {
     return normalize(p1 + p2);
 }
-
-
 
 int vertex_exists(const float3 v,const int id,const int beg, const int end)
 {
@@ -78,7 +76,6 @@ int add_vertex(const float3 v, const int id, const int beg, const int end)
             return i;
         }
     }
-    //vertices_not_empty[0] += 1;
     return -1;
 }
 
@@ -99,9 +96,6 @@ void generate_sphere(const uint uid)
     const int triangles_id = id * triangles_number_per_sphere;
     const int vertices_id = id * vertices_number_per_sphere;
     const int inter_triangles_0 = id * inter_tri_size;
-    
-   
-
     const float3 position = particles[id].pos;
 
     int beg = 0;
@@ -148,7 +142,7 @@ void generate_sphere(const uint uid)
         6, 2, 10,
         8, 6, 7,
         9, 8, 1 };
-
+    
     for(int i = inter_triangles_0; i < inter_triangles_0 + 60; i ++)
     {
         intermediate_triangles[i] = primitive_triangles[i - inter_triangles_0] + vertices_id;
@@ -159,12 +153,9 @@ void generate_sphere(const uint uid)
     {
         const int pre_tri_array_size = 60.0 * pow(4.0, res - 1.0);
         const int tri_array_size = 60.0 * pow(4.0, res);
-        
         // Number of vertices = number of faces / 2 + 2
         beg = pre_tri_array_size / 6.0 + 2;
         end = tri_array_size / 6.0 + 2;
-
-       
         // Calculating the four new triangles for each existing triangles
         for(int
             tri_index = inter_triangles_0 + first_inter_index;
@@ -189,8 +180,6 @@ void generate_sphere(const uint uid)
 
             // Adding the four new triangles to the intermediate triangles array
             const int new_tri_index = inter_triangles_0 + first_inter_index + (tri_index - inter_triangles_0 - first_inter_index) * 4 + pre_tri_array_size;
-           
-
             // First new triangle
             intermediate_triangles[new_tri_index     ] = v0_index;
             intermediate_triangles[new_tri_index + 1 ] = v01_index;
@@ -219,71 +208,6 @@ void generate_sphere(const uint uid)
         triangles[final_index + triangles_id - first_inter_index] = intermediate_triangles[inter_triangles_0 + final_index];
     }
 }
-void init_arrow_triangles(const int id )
-{
-    const int primitive_triangles[36] = {
-        0, 2, 1,
-        0, 3, 2,
-        2, 3, 4,
-        2, 4, 5,
-        1, 2, 5,
-        1, 5, 6,
-        0, 7, 4,
-        0, 4, 3,
-        5, 4, 7,
-        5, 7, 6,
-        0, 6, 7,
-        0, 1, 6
-    };
-    const int triangles_id = id * 36;
-    const int vertices_id = id * 8;
-    
-    for(int i = triangles_id; i < triangles_id + 36; i ++)
-    {
-        arrows_triangles[i] = primitive_triangles[i - triangles_id] + vertices_id;
-    }
-}
-
-void set_arrow_vertices(const float3 v, const float3 pos, const int id, const bool big)
-{
-    const float arrow_length = length(v) * radius;
-    float thickness;
-    if(big) thickness = radius * 0.3;
-    else thickness = radius * 0.1;
-
-    const float3 dir = normalize(v);
-    const float3 up = float3(dir.y, dir.x, dir.z);
-    const float3 right = cross(dir, up);
-    
-    const float3 p0 = pos - thickness / 2 * right - thickness / 2 * up;
-    const float3 p1 = p0 + arrow_length * dir;
-    const float3 p3 = p0 + thickness * up;
-    const float3 p2 = p1 + thickness * up;
-    const float3 p7 = p0 + thickness * right;
-    const float3 p6 = p7 + arrow_length * dir;
-    const float3 p4 = p7 + thickness * up;
-    const float3 p5 = p7 + thickness * up + thickness * dir;
-    const int arrow_id = id * 8;
-    arrows_vertices[arrow_id    ] = p0;
-    arrows_vertices[arrow_id + 1] = p1;
-    arrows_vertices[arrow_id + 2] = p2;
-    arrows_vertices[arrow_id + 3] = p3;
-    arrows_vertices[arrow_id + 4] = p4;
-    arrows_vertices[arrow_id + 5] = p5;
-    arrows_vertices[arrow_id + 6] = p6;
-    arrows_vertices[arrow_id + 7] = p7;
-    //DEBUG
-    /*
-    arrows_vertices[arrow_id    ] = dir;
-    arrows_vertices[arrow_id + 1] = up;
-    arrows_vertices[arrow_id + 2] = right;
-    arrows_vertices[arrow_id + 3] = v;
-    arrows_vertices[arrow_id + 4] = p4;
-    arrows_vertices[arrow_id + 5] = p5;
-    arrows_vertices[arrow_id + 6] = p6;
-    arrows_vertices[arrow_id + 7] = p7;
-    */
-}
 
 float3 calculate_magnetic_field(const float3 p,const mi magnet)
 {
@@ -291,9 +215,7 @@ float3 calculate_magnetic_field(const float3 p,const mi magnet)
     const float distance = length(dif_pos);
     const float constant = magnet.wire_number * MAGNETIC_CONST * magnet.cur / (4 * PI * pow(distance, 3.0));
     const float3 vec1 = magnet.right * magnet.length;
-
     const float3 cross_product = cross(vec1, dif_pos);
-        
     return constant * cross_product;
 }
 
@@ -316,17 +238,14 @@ void move_sphere( const int id)
     for(int i = 0; i < magnet_number; i ++)
     {
         const float3 little_mag_field = calculate_magnetic_field(p.pos, magnet[i]);
-        set_arrow_vertices(little_mag_field, p.pos, id * (magnet_number + 1) + i, false);
+        arrows[id * (magnet_number + 1) + i] = little_mag_field;
         magnetic_field += little_mag_field;
     }
-    set_arrow_vertices(magnetic_field, p.pos, id * (magnet_number + 1) + magnet_number , true);
-
+    arrows[id * (magnet_number + 1) + magnet_number] = magnetic_field;
     const float3 magnetic_force = p.charge / p.mass * cross(p.dir, magnetic_field);
-    const float3 delta_speed = magnetic_force * time;
-    const float3 new_speed = p.dir + delta_speed;
     const float3 old_pos = p.pos;
-    p.pos += new_speed * time;
-    p.dir = new_speed;
+    p.dir += time * magnetic_force;
+    p.pos += time * p.dir;
     move_vertices(p.pos - old_pos, id);
     particles[id] = p;
 }
@@ -341,11 +260,5 @@ void init_particles (const uint id : SV_DispatchThreadID)
 void update_particles (const uint id : SV_DispatchThreadID)
 {
     move_sphere(id);
-}
-
-[numthreads(128,1,1)]
-void init_arrows(const uint id : SV_DispatchThreadID)
-{
-    init_arrow_triangles(id);
 }
 
