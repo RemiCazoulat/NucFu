@@ -1,0 +1,269 @@
+#define PI             3.14159265358979323846
+#define MAGNETIC_CONST 1.25663706e-6
+#define GRAVITY        9.80665
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel init_particles
+#pragma kernel update_particles
+#pragma kernel init_arrows
+
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+struct mi
+{
+    float3 pos;
+    float3 right;
+    float length;
+    float cur;
+    int wire_number;
+};
+
+struct particle
+{
+    float3 pos;
+    float3 dir;
+    float charge;
+    float mass;
+};
+// ONLY INIT
+int resolution;
+int inter_tri_size;
+float radius;
+float time;
+int magnet_number;
+
+RWStructuredBuffer<int> intermediate_triangles;
+RWStructuredBuffer<int> triangles;
+RWStructuredBuffer<int> vertices_not_empty;
+
+RWStructuredBuffer<particle> particles;
+RWStructuredBuffer<float3> vertices;
+
+RWStructuredBuffer<mi> magnet;
+
+RWStructuredBuffer<float3> arrows;
+RWStructuredBuffer<int> arrows_triangles;
+
+
+float3 get_midpoint(const float3 p1,const float3 p2)
+{
+    return normalize(p1 + p2);
+}
+
+int vertex_exists(const float3 v,const int id,const int beg, const int end)
+{
+    int exists = -1;
+    for(int i = id + beg; i < id + end; i ++)
+    {
+        float3 actual_v = vertices[i];
+        const bool same = v.x == actual_v.x && v.y == actual_v.y && v.z == actual_v.z;
+        if(same) {
+            exists = i;
+            break;
+        }
+    }
+    return exists;
+}
+
+int add_vertex(const float3 v, const int id, const int beg, const int end)
+{
+    for(int i = id + beg; i < id + end; i ++)
+    {
+        if(vertices_not_empty[i] == -1)
+        {
+            vertices[i] = v;
+            vertices_not_empty[i] = 0;
+            return i;
+        }
+    }
+    return -1;
+}
+
+int assign_index(const float3 v, const int id, const int beg, const int end)
+{
+    int v_index = vertex_exists(v, id, beg, end);
+    if (v_index == -1) {
+        v_index = add_vertex(v, id, beg, end); // if not, adding the new point to the list of index.
+    }
+    return v_index;
+}
+
+void generate_sphere(const uint uid)
+{
+    const int id = uid;
+    const int triangles_number_per_sphere = 60.0 * pow(4.0, resolution);
+    const int vertices_number_per_sphere = triangles_number_per_sphere / 6.0 + 2.0;
+    const int triangles_id = id * triangles_number_per_sphere;
+    const int vertices_id = id * vertices_number_per_sphere;
+    const int inter_triangles_0 = id * inter_tri_size;
+    const float3 position = particles[id].pos;
+
+    int beg = 0;
+    int end = 12;
+
+    const float t = (1.0 + sqrt(5.0)) * 0.5;
+    // 12 vertices
+   assign_index(normalize(float3(-1.0,  t, 0.0)), vertices_id, beg, end);
+   assign_index(normalize(float3( 1.0,  t, 0.0)), vertices_id, beg, end);
+   assign_index(normalize(float3(-1.0, -t, 0.0)), vertices_id, beg, end);
+   assign_index(normalize(float3( 1.0, -t, 0.0)), vertices_id, beg, end);
+
+   assign_index(normalize(float3(0.0, -1.0,  t)), vertices_id, beg, end);
+   assign_index(normalize(float3(0.0,  1.0,  t)), vertices_id, beg, end);
+   assign_index(normalize(float3(0.0, -1.0, -t)), vertices_id, beg, end);
+   assign_index(normalize(float3(0.0,  1.0, -t)), vertices_id, beg, end);
+
+   assign_index(normalize(float3( t, 0.0, -1.0)), vertices_id, beg, end);
+   assign_index(normalize(float3( t, 0.0,  1.0)), vertices_id, beg, end);
+   assign_index(normalize(float3(-t, 0.0, -1.0)), vertices_id, beg, end);
+   assign_index(normalize(float3(-t, 0.0,  1.0)), vertices_id, beg, end);
+    // 20 triangles, Array of size 60
+    const int primitive_triangles[60] = {
+        0 , 11 , 5,
+        0, 5, 1,
+        0, 1, 7,
+        0, 7, 10,
+        0, 10, 11,
+
+        1, 5, 9,
+        5, 11, 4,
+        11, 10, 2,
+        10, 7, 6,
+        7, 1, 8,
+
+        3, 9, 4,
+        3, 4, 2,
+        3, 2, 6,
+        3, 6, 8,
+        3, 8, 9,
+
+        4, 9, 5,
+        2, 4, 11,
+        6, 2, 10,
+        8, 6, 7,
+        9, 8, 1 };
+    
+    for(int i = inter_triangles_0; i < inter_triangles_0 + 60; i ++)
+    {
+        intermediate_triangles[i] = primitive_triangles[i - inter_triangles_0] + vertices_id;
+    }
+    // Loop to precise the sphere, according to the given resolution.
+    int first_inter_index = 0;
+    for(int res = 1; res <= resolution; res ++)
+    {
+        const int pre_tri_array_size = 60.0 * pow(4.0, res - 1.0);
+        const int tri_array_size = 60.0 * pow(4.0, res);
+        // Number of vertices = number of faces / 2 + 2
+        beg = pre_tri_array_size / 6.0 + 2;
+        end = tri_array_size / 6.0 + 2;
+        // Calculating the four new triangles for each existing triangles
+        for(int
+            tri_index = inter_triangles_0 + first_inter_index;
+            tri_index < inter_triangles_0 + pre_tri_array_size + first_inter_index;
+            tri_index += 3)
+        {
+            const int v0_index = intermediate_triangles[tri_index    ];
+            const int v1_index = intermediate_triangles[tri_index + 1];
+            const int v2_index = intermediate_triangles[tri_index + 2];
+
+            const float3 v0 = vertices[v0_index];
+            const float3 v1 = vertices[v1_index];
+            const float3 v2 = vertices[v2_index];
+
+            const float3 v01 = get_midpoint(v0, v1);
+            const float3 v12 = get_midpoint(v1, v2);
+            const float3 v20 = get_midpoint(v2, v0);
+            
+            const int v01_index = assign_index(v01, vertices_id, beg, end);
+            const int v12_index = assign_index(v12, vertices_id, beg, end);
+            const int v20_index = assign_index(v20, vertices_id, beg, end);
+
+            // Adding the four new triangles to the intermediate triangles array
+            const int new_tri_index = inter_triangles_0 + first_inter_index + (tri_index - inter_triangles_0 - first_inter_index) * 4 + pre_tri_array_size;
+            // First new triangle
+            intermediate_triangles[new_tri_index     ] = v0_index;
+            intermediate_triangles[new_tri_index + 1 ] = v01_index;
+            intermediate_triangles[new_tri_index + 2 ] = v20_index;
+            // Second new triangle 
+            intermediate_triangles[new_tri_index + 3 ] = v1_index;
+            intermediate_triangles[new_tri_index + 4 ] = v12_index;
+            intermediate_triangles[new_tri_index + 5 ] = v01_index;
+            // Third new triangle 
+            intermediate_triangles[new_tri_index + 6 ] = v2_index;
+            intermediate_triangles[new_tri_index + 7 ] = v20_index;
+            intermediate_triangles[new_tri_index + 8 ] = v12_index;
+            // Fourth new triangle
+            intermediate_triangles[new_tri_index + 9 ] = v01_index;
+            intermediate_triangles[new_tri_index + 10] = v12_index;
+            intermediate_triangles[new_tri_index + 11] = v20_index;
+        }
+        first_inter_index += pre_tri_array_size;
+    }
+    for(int vertex_index = vertices_id; vertex_index < vertices_id + vertices_number_per_sphere; vertex_index ++)
+    {
+        vertices[vertex_index] = vertices[vertex_index] * radius + position;
+    }
+    for(int final_index = first_inter_index; final_index < inter_tri_size; final_index ++)
+    {
+        triangles[final_index + triangles_id - first_inter_index] = intermediate_triangles[inter_triangles_0 + final_index];
+    }
+}
+
+float3 calculate_magnetic_field(const float3 p)
+{
+    float3 magnetic_field = float3(0.0, 0.0, 0.0);
+    for(int i = 0; i < magnet_number; i ++)
+    {
+        const mi m = magnet[i];
+        const float3 dif_pos = p - m.pos;
+        const float distance = length(dif_pos);
+        const float3 dL = m.right * m.length;
+        if(distance != 0)
+        {
+            const float dB = m.wire_number * MAGNETIC_CONST * m.cur / (4 * PI * pow(distance, 3.0)) *
+                cross(dL, dif_pos) / pow(distance, 3);
+            magnetic_field += dB;
+            
+        }
+    }
+    return magnetic_field;
+}
+
+void move_vertices(const float3 p, const int id)
+{
+    const int triangles_number_per_sphere = 60.0 * pow(4.0, resolution);
+    const int vertices_number_per_sphere = triangles_number_per_sphere / 6.0 + 2.0;
+    const int vertices_id = id * vertices_number_per_sphere;
+    
+    for(int vertex_i = vertices_id; vertex_i < vertices_number_per_sphere + vertices_id; vertex_i ++)
+    {
+        vertices[vertex_i] += p;
+    }
+}
+
+void move_sphere( const int id)
+{
+    float3 magnetic_field = float3(0.0, 0.0, 0.0);
+    particle p = particles[id];
+    calculate_magnetic_field(p.pos);
+    arrows[id * (magnet_number + 1) + magnet_number] = magnetic_field;
+    const float3 magnetic_force = p.charge / p.mass * cross(p.dir, magnetic_field);
+    const float3 old_pos = p.pos;
+    p.dir += time * magnetic_force;
+    p.pos += time * p.dir;
+    move_vertices(p.pos - old_pos, id);
+    particles[id] = p;
+}
+
+[numthreads(128,1,1)]
+void init_particles (const uint id : SV_DispatchThreadID)
+{
+    generate_sphere(id);
+}
+
+[numthreads(128,1,1)]
+void update_particles (const uint id : SV_DispatchThreadID)
+{
+    move_sphere(id);
+}
+
