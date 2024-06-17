@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Magnets;
 using UnityEngine;
 
 public abstract class BasicMagnet : Magnet

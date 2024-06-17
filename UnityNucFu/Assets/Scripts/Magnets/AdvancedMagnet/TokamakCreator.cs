@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Magnets;
 using UnityEngine;
 
 public class TokamakCreator : MagnetCreator
@@ -33,7 +34,7 @@ public class TokamakCreator : MagnetCreator
 
     public override void CreateMagnet()
     {
-        magnet = new Tokamak(
+        Magnet = new Tokamak(
             position,
             squareSpace,
             toreWireRadius,
@@ -52,11 +53,11 @@ public class TokamakCreator : MagnetCreator
             centralSolenoidSpirePrecision,
             centralSolenoidSpireNumber
         );
-        magnet.ModifyRotation(rotation);
-        mesh = new Mesh();
-        GetComponent<MeshFilter>().mesh = mesh;
-        transform.position = magnet.position;
-        magnet.CreateMagnet();
+        Magnet.ModifyRotation(rotation);
+        Mesh = new Mesh();
+        GetComponent<MeshFilter>().mesh = Mesh;
+        transform.position = Magnet.Position;
+        Magnet.CreateMagnet();
         AssignMesh();
     }
 }

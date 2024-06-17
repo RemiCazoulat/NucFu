@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Magnets;
 using UnityEngine;
 
 public class Tokamak : Magnet
@@ -63,35 +64,29 @@ public class Tokamak : Magnet
             centralSolenoidSpirePrecision,
             centralSolenoidSpireNumber
             );
-        _centralSolenoid.SetDirectionVectors(up, Vector3.Cross(up, right), right);
+        _centralSolenoid.SetDirectionVectors(Up, Vector3.Cross(Up, Right), Right);
     }
 
     public new void ModifyRotation(Vector3 rotation)
     {
         base.ModifyRotation(rotation);
-        _tore.SetDirectionVectors(direction, up, right);
-        _centralSolenoid.SetDirectionVectors(up, Vector3.Cross(up, right), right);
+        _tore.SetDirectionVectors(Direction, Up, Right);
+        _centralSolenoid.SetDirectionVectors(Up, Vector3.Cross(Up, Right), Right);
         
     }
     public new void SetDirectionVectors(Vector3 d, Vector3 u, Vector3 r)
     {
         base.SetDirectionVectors(d, u, r);
         _tore.SetDirectionVectors(d, u, r);
-        _centralSolenoid.SetDirectionVectors(up, Vector3.Cross(up, right), right);
+        _centralSolenoid.SetDirectionVectors(Up, Vector3.Cross(Up, Right), Right);
     }
-    
-    public override Vector3 CalculateMagneticField(Vector3 p)
-    {
-        return _tore.CalculateMagneticField(p) + _centralSolenoid.CalculateMagneticField(p);
-    }
-
     public override void CreateMagnet()
     {
         _tore.CreateMagnet();
         _centralSolenoid.CreateMagnet();
-        mi.AddRange(_tore.mi);
-        mi.AddRange(_centralSolenoid.mi);
-        buffers.AddBuffers(_tore.buffers);
-        buffers.AddBuffers(_centralSolenoid.buffers);
+        MagInfos.AddRange(_tore.MagInfos);
+        MagInfos.AddRange(_centralSolenoid.MagInfos);
+        Buffers.AddBuffers(_tore.Buffers);
+        Buffers.AddBuffers(_centralSolenoid.Buffers);
     }
 }

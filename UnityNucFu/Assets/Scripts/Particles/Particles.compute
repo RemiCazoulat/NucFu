@@ -4,7 +4,6 @@
 // Each #kernel tells which function to compile; you can have many kernels
 #pragma kernel init_particles
 #pragma kernel update_particles
-#pragma kernel init_arrows
 
 
 // Create a RenderTexture with enableRandomWrite flag and set it
@@ -21,7 +20,7 @@ struct mi
 struct particle
 {
     float3 pos;
-    float3 dir;
+    float3 vel;
     float charge;
     float mass;
 };
@@ -41,7 +40,7 @@ RWStructuredBuffer<float3> vertices;
 
 RWStructuredBuffer<mi> magnet;
 
-RWStructuredBuffer<float3> arrows;
+RWStructuredBuffer<float3> magneticFields;
 RWStructuredBuffer<int> arrows_triangles;
 
 
@@ -209,26 +208,6 @@ void generate_sphere(const uint uid)
     }
 }
 
-float3 calculate_magnetic_field(const float3 p)
-{
-    float3 magnetic_field = float3(0.0, 0.0, 0.0);
-    for(int i = 0; i < magnet_number; i ++)
-    {
-        const mi m = magnet[i];
-        const float3 dif_pos = p - m.pos;
-        const float distance = length(dif_pos);
-        const float3 dL = m.right * m.length;
-        if(distance != 0)
-        {
-            const float dB = m.wire_number * MAGNETIC_CONST * m.cur / (4 * PI * pow(distance, 3.0)) *
-                cross(dL, dif_pos) / pow(distance, 3);
-            magnetic_field += dB;
-            
-        }
-    }
-    return magnetic_field;
-}
-
 void move_vertices(const float3 p, const int id)
 {
     const int triangles_number_per_sphere = 60.0 * pow(4.0, resolution);
@@ -241,18 +220,40 @@ void move_vertices(const float3 p, const int id)
     }
 }
 
-void move_sphere( const int id)
+float3 calculate_magnetic_field(const float3 p)
 {
     float3 magnetic_field = float3(0.0, 0.0, 0.0);
+    for(int i = 0; i < magnet_number; i ++)
+    {
+        const mi m = magnet[i];
+        const float3 dif_pos = p - m.pos;
+        const float distance = length(dif_pos);
+        const float3 dL = m.right * m.length;
+        if(distance != 0)
+        {
+            const float3 dB = m.wire_number * MAGNETIC_CONST * m.cur / (4 * PI) * cross(dL, dif_pos) / pow(distance, 3);
+            magnetic_field += dB;
+        }
+    }
+    return magnetic_field;
+}
+
+void move_sphere( const int id)
+{
     particle p = particles[id];
-    calculate_magnetic_field(p.pos);
-    arrows[id * (magnet_number + 1) + magnet_number] = magnetic_field;
-    const float3 magnetic_force = p.charge / p.mass * cross(p.dir, magnetic_field);
-    const float3 old_pos = p.pos;
-    p.dir += time * magnetic_force;
-    p.pos += time * p.dir;
-    move_vertices(p.pos - old_pos, id);
-    particles[id] = p;
+    
+    const float3 magnetic_field = calculate_magnetic_field(p.pos);
+    magneticFields[id] = magnetic_field;
+    const float3 magnetic_force = p.charge / p.mass * cross(p.vel, magnetic_field);
+    const float magnitude_force = length(magnetic_force);
+    if(magnitude_force != 0)
+    {
+        const float3 old_pos = p.pos;
+        p.vel += time * magnetic_force;
+        p.pos += time * p.vel;
+        move_vertices(p.pos - old_pos, id);
+        particles[id] = p;
+    }
 }
 
 [numthreads(128,1,1)]

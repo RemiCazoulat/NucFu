@@ -1,31 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class MagnetCreator : MonoBehaviour
+namespace Magnets
 {
-    public Magnet magnet;
-    
-  
-    
-    protected Mesh mesh;
-    protected MeshFilter meshFilter;
-    
-    [Button(nameof(CreateMagnet))]
-    public bool buttonField;
-
-    public abstract void CreateMagnet();
-    
-    
-    private void Start()
+    public abstract class MagnetCreator : MonoBehaviour
     {
-        CreateMagnet();
-    }
-    
-    protected void AssignMesh() {
-        mesh.Clear();
-        mesh.vertices =  magnet.buffers.vertices.ToArray();
-        mesh.triangles =  magnet.buffers.triangles.ToArray();
-        mesh.RecalculateNormals();
+        public Magnet Magnet;
+        protected Mesh Mesh;
+        [Button(nameof(CreateMagnet))]
+        public bool buttonField;
+        public abstract void CreateMagnet();
+        private void Start()
+        {
+            CreateMagnet();
+            Debug.Log(Magnet.ToString());
+        }
+        private void OnDrawGizmos()
+        {
+            Magnet?.GizmosDrawing();
+        }
+        protected void AssignMesh() {
+            Mesh.Clear();
+            Mesh.vertices =  Magnet.Buffers.Vertices.ToArray();
+            Mesh.triangles =  Magnet.Buffers.Triangles.ToArray();
+            Mesh.RecalculateNormals();
+            transform.TransformPoint(Vector3.zero);
+        }
     }
 }

@@ -54,45 +54,35 @@ public class Tore : BasicMagnet
             float cos = middleRadius * (float)Math.Cos(posOnCircle);
             float sin = middleRadius * (float)Math.Sin(posOnCircle);
 
-            Vector3 solenoidPosition = position + (cos * right - sin * direction);
+            Vector3 solenoidPosition = Position + (cos * Right - sin * Direction);
             Vector3 solenoidRight = Vector3.Normalize(solenoidPosition);
-            Vector3 solenoidDirection = Vector3.Cross(up, solenoidRight);
+            Vector3 solenoidDirection = Vector3.Cross(Up, solenoidRight);
             
             var solenoid = new Solenoid(
                 solenoidPosition, 
                 wireRadius, 
                 resistivity, 
                 tension, 
-                squareSpace, 
+                SquareSpace, 
                 solenoidRadius , 
                 solenoidWidth, 
                 spirePrecision,
                 spireNumber);
             
-            solenoid.direction = solenoidDirection;
-            solenoid.up = up;
-            solenoid.right = solenoidRight;
+            solenoid.Direction = solenoidDirection;
+            solenoid.Up = Up;
+            solenoid.Right = solenoidRight;
             solenoids.Add(solenoid);
         }
     }
-    public override Vector3 CalculateMagneticField(Vector3 p)
-    {
-        Vector3 magneticField = new Vector3();
-        foreach(Solenoid solenoid in solenoids)
-        {
-            magneticField += solenoid.CalculateMagneticField(p);
-        }
-        return magneticField;
-    }
-
     public override void CreateMagnet()
     {
         CreateSolenoids();
         foreach(var s in solenoids)
         {
             s.CreateMagnet();
-            mi.AddRange(s.mi);
-            buffers.AddBuffers(s.buffers);
+            MagInfos.AddRange(s.MagInfos);
+            Buffers.AddBuffers(s.Buffers);
         }
 
     }

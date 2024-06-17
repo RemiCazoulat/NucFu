@@ -57,17 +57,17 @@ public class Solenoid : BasicMagnet
             float sin = radius * (float)Math.Sin(posOnCircle);
 
              
-            Vector3 magnetPosition = (cos * right + sin * up);
-            Vector3 relativeMagnetPosition = position + magnetPosition;
-            Vector3 magnetDir = direction;           
+            Vector3 magnetPosition = (cos * Right + sin * Up);
+            Vector3 relativeMagnetPosition = Position + magnetPosition;
+            Vector3 magnetDir = Direction;           
             Vector3 magnetUp = Vector3.Normalize(magnetPosition);
-            Vector3 magnetRight = Vector3.Cross(magnetDir, magnetUp);
+            Vector3 magnetRight = Vector3.Normalize(Vector3.Cross(magnetDir, magnetUp));
             var magnet = new ElectroMagnet(
                 relativeMagnetPosition, 
                 wireRadius,
                 resistivity,
                 tension,
-                squareSpace,
+                SquareSpace,
                 length,
                 thickness,
                 spireNumber
@@ -76,17 +76,6 @@ public class Solenoid : BasicMagnet
             magnets.Add(magnet);
         }
     }
-    
-    public override Vector3 CalculateMagneticField(Vector3 p)
-    {
-        Vector3 magneticField = new();
-        foreach(ElectroMagnet magnet in magnets)
-        {
-            magneticField += magnet.CalculateMagneticField(p);
-        }
-        return magneticField;
-    }
-
     public override void CreateMagnet()
     {
         if (magnets.Count == 0)
@@ -97,8 +86,8 @@ public class Solenoid : BasicMagnet
         foreach(var em in magnets)
         {
             em.CreateMagnet();
-            mi.AddRange(em.mi);
-            buffers.AddBuffers(em.buffers);
+            MagInfos.AddRange(em.MagInfos);
+            Buffers.AddBuffers(em.Buffers);
         }
 
     }

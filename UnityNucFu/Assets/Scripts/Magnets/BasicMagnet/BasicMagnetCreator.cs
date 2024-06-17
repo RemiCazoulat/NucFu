@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Magnets;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -46,7 +47,7 @@ public class BasicMagnetCreator : MagnetCreator
    {
        switch (magnetType) {
            case MagnetType.ElectroMagnet :
-               magnet = new ElectroMagnet(
+               Magnet = new ElectroMagnet(
                    position, 
                    wireRadius,
                    resistivity, 
@@ -57,7 +58,7 @@ public class BasicMagnetCreator : MagnetCreator
                    wireNumber);
                break;
            case MagnetType.Solenoid :
-               magnet = new Solenoid(
+               Magnet = new Solenoid(
                    position,
                    wireRadius,
                    resistivity,
@@ -69,7 +70,7 @@ public class BasicMagnetCreator : MagnetCreator
                    wireNumber);
                break;
            case MagnetType.Tore :
-               magnet = new Tore(
+               Magnet = new Tore(
                    position, 
                    wireRadius,
                    resistivity, 
@@ -83,12 +84,13 @@ public class BasicMagnetCreator : MagnetCreator
                    wireNumber);
                break;
        }
-       magnet.ModifyRotation(rotation);
-       mesh = new Mesh();
-       GetComponent<MeshFilter>().mesh = mesh;
+       Magnet.ModifyRotation(rotation);
+       Mesh = new Mesh();
+       GetComponent<MeshFilter>().mesh = Mesh;
        var tr = transform;
-       tr.position = magnet.position;
-       magnet.CreateMagnet();
+       tr.position = Magnet.Position;
+       Magnet.CreateMagnet();
        AssignMesh();
    }
+   
 }

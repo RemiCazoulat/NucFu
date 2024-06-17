@@ -1,5 +1,7 @@
 using System;
+using Magnets;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Particles
 {
@@ -14,13 +16,12 @@ namespace Particles
         public float particleSize;
         public int particleResolution;
         public Vector3 particlePosition;
-        public Vector3 particleDirection;
+        public Vector3 particleVelocity;
         public float particleCharge;
         public float particleMass;
         public bool isArrows;
         public MagnetCreator magnetCreator;
         public ComputeShader compute;
-    
         // ----{ COMPUTE BUFFERS }----
         // Only for init
         private ComputeBuffer _intermediateTrianglesBuffer;
@@ -32,17 +33,14 @@ namespace Particles
         // Only for update
         private ComputeBuffer _magnetsBuffer;
         // Only for arrows
-        private ComputeBuffer _arrowsBuffer;
-    
+        private ComputeBuffer _magFieldArrowsBuffer;
         // ----{ ARRAYS FOR COMPUTE BUFFERS }----
         private int[] _verticesNotEmpty; // Only for initialization
         private int[] _triangles; // only for initialization, get it after, and release it.
         private Vector3[] _vertices; // Stocking particles positions
         private Particle[] _particles; // Stocking particles infos
-        private MagnetInfo[] _magnets;
-        private Vector3[] _arrows; // vertices for arrows
+        private Vector3[] _magFieldArrows; // vertices for arrows
         private int[] _arrowsTriangles; // triangles for arrows
-    
         // ----{ BUTTONS }----
         [Button(nameof(CreateParticles))]
         public bool buttonField1;
@@ -60,8 +58,9 @@ namespace Particles
         private int _timeID ;
         private int _magnetNumberID;
         private int _magnetID;
-        private int _arrowsID;
+        private int _magFieldArrowsID;
         private int _arrowsTrianglesID;
+        // ----{ OTHERS }----
     
         // ----------------------------------------------------------------------------
         // ------------------------{ BUTTONS FUNCTIONS }-------------------------------
@@ -74,7 +73,6 @@ namespace Particles
         // ----------------------------------------------------------------------------
         // ---------------------{ INITIALIZATION FUNCTIONS }---------------------------
         // ----------------------------------------------------------------------------
-    
         /// <summary>
         /// Initialize all the particles, at the position attributed in the SetParticles() function.
         /// The number of particles is decided with particlesNumber.
@@ -86,34 +84,34 @@ namespace Particles
         /// </remarks>
         private void InitParticles()
         { 
-            // ----{ INIT PARTICLES MESH }----
+            // ----{ INIT PARTICLES MESH }------------------------------------------------------------------------------
             transform.position = Vector3.zero;
             _particlesMesh = new Mesh();
             GetComponent<MeshFilter>().mesh = _particlesMesh;
             _particlesMesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-            // ----{ CALCULATING COUNTS OF BUFFERS }----
+            // ----{ CALCULATING COUNTS OF BUFFERS }--------------------------------------------------------------------
             var interTriNumber = 20; // initial faces number = 20
             for(var i = 1; i <= particleResolution; i ++) { interTriNumber += 20 * (int)Math.Pow(4.0, i); }
             interTriNumber *= 3;
             var facesPerSphere = 20 * (int)Math.Pow(4, particleResolution);
             var totalVerticesNumber = particleNumber * (facesPerSphere / 2 + 2);
             var totalTrianglesIndicesNumber = particleNumber * facesPerSphere * 3;
-            var totalInterTriNumber = interTriNumber * particleNumber;
-            // ----{ INIT ARRAYS }----
+            var totalInterTriNumber = particleNumber *  interTriNumber;
+            // ----{ INIT ARRAYS }--------------------------------------------------------------------------------------
             _particles = new Particle[particleNumber];
-            _verticesNotEmpty = new int[totalVerticesNumber ];
+            _verticesNotEmpty = new int[totalVerticesNumber];
             _triangles = new int[totalTrianglesIndicesNumber];
             _vertices = new Vector3[totalVerticesNumber];
-            // ----{ SETTING INITIAL DATAS }----
+            // ----{ SETTING INITIAL DATA }-----------------------------------------------------------------------------
             for (var i = 0; i < totalVerticesNumber  ; i++) { _verticesNotEmpty[i] = -1; }
             SetParticles();
-            // ----{ INIT BUFFERS }----
+            // ----{ INIT BUFFERS }-------------------------------------------------------------------------------------
             _intermediateTrianglesBuffer = new ComputeBuffer(totalInterTriNumber,4);
             _verticesNotEmptyBuffer = new ComputeBuffer(totalVerticesNumber, 4);
             _trianglesBuffer = new ComputeBuffer(totalTrianglesIndicesNumber,4);
             _particlesBuffer = new ComputeBuffer(particleNumber, Particle.GetSize());
             _verticesBuffer = new ComputeBuffer(totalVerticesNumber, 12);
-            // ----{ SETTING DATAS, BUFFERS & IDS }----
+            // ----{ SETTING DATA, BUFFERS & IDS }---------------------------------------------------------------------
             _verticesNotEmptyBuffer.SetData(_verticesNotEmpty);
             _particlesBuffer.SetData(_particles);
             _resolutionID = Shader.PropertyToID("resolution");
@@ -134,12 +132,12 @@ namespace Particles
             compute.SetBuffer(0, _verticesID, _verticesBuffer);
             compute.SetBuffer(0, _particlesID, _particlesBuffer);
             compute.SetBuffer(1, _particlesID, _particlesBuffer);
-            // ----{ DISPATCH AND GET DATAS }---- 
+            // ----{ DISPATCH AND GET DATA }---------------------------------------------------------------------------
             compute.SetFloat(_timeID, Time.deltaTime);
             compute.Dispatch(0, particleNumber / 128 + 1, 1, 1);
             _verticesBuffer.GetData(_vertices);
             _trianglesBuffer.GetData(_triangles);
-            // ----{ SETTING PARTICLES MESH TRIANGLES }----
+            // ----{ SETTING PARTICLES MESH TRIANGLES }-----------------------------------------------------------------
             _particlesMesh.vertices = _vertices;
             _particlesMesh.triangles = _triangles;
             _particlesMesh.RecalculateNormals();
@@ -148,22 +146,19 @@ namespace Particles
         {
             _magnetNumberID = Shader.PropertyToID("magnet_number");
             _magnetID = Shader.PropertyToID("magnet");
-            _magnets = magnetCreator.magnet.mi.ToArray();
-            _magnetsBuffer = new ComputeBuffer(magnetCreator.magnet.mi.Count, MagnetInfo.GetSize());
-            compute.SetInt(_magnetNumberID, magnetCreator.magnet.mi.Count);
+            _magnetsBuffer = new ComputeBuffer(magnetCreator.Magnet.MagInfos.Count, MagnetInfo.GetSize());
+            compute.SetInt(_magnetNumberID, magnetCreator.Magnet.MagInfos.Count);
             compute.SetBuffer(1, _verticesID, _verticesBuffer);
             compute.SetBuffer(1, _magnetID, _magnetsBuffer);
             compute.SetBuffer(1, _particlesID, _particlesBuffer);
-            _magnetsBuffer.SetData(magnetCreator.magnet.mi);
+            _magnetsBuffer.SetData(magnetCreator.Magnet.MagInfos);
         }
-        private void InitArrows()
+        private void InitMagFieldArrows()
         {
-            _arrowsID = Shader.PropertyToID("arrows");
-            var arrowCountPerSphere = _magnets.Length + 1;
-            var totalArrowCount = arrowCountPerSphere * particleNumber;
-            _arrows = new Vector3[totalArrowCount];
-            _arrowsBuffer = new ComputeBuffer(totalArrowCount, 12);
-            compute.SetBuffer(1, _arrowsID, _arrowsBuffer);
+            _magFieldArrowsID = Shader.PropertyToID("magneticFields");
+            _magFieldArrows = new Vector3[particleNumber];
+            _magFieldArrowsBuffer = new ComputeBuffer(particleNumber, 12);
+            compute.SetBuffer(1, _magFieldArrowsID, _magFieldArrowsBuffer);
         }
         // ----------------------------------------------------------------------------
         // --------------------------{ UPDATE FUNCTIONS }------------------------------
@@ -178,17 +173,20 @@ namespace Particles
             compute.Dispatch(1, particleNumber / 128 + 1, 1, 1);
             _verticesBuffer.GetData(_vertices);
             _particlesBuffer.GetData(_particles);
-            _arrowsBuffer.GetData(_arrows);
-        
+            _magFieldArrowsBuffer.GetData(_magFieldArrows);
             _particlesMesh.vertices = _vertices;
             _particlesMesh.RecalculateNormals();
+            // PRINTS
+            //Debug.Log("particle's mag field == 0 : " + (_magFieldArrows[0] == Vector3.zero));
+            //Debug.Log(_vertices[0]);
+            Debug.Log("particle vel : " + _particles[0].vel);
         }
         private void SetParticles()
         {
             for (var i = 0; i < particleNumber; i++)
             {
-                var pos = new Vector3(particleSize * 10 * i, 0f, 0f);
-                _particles[i] = new Particle(pos + particlePosition, particleDirection, particleCharge, particleMass);
+                var pos = new Vector3(particleSize * 5 * i, 0f, 0f);
+                _particles[i] = new Particle(pos + particlePosition, particleVelocity, particleCharge, particleMass);
             }
         }
         private void ReleaseParticlesBuffers()
@@ -211,8 +209,8 @@ namespace Particles
         }
         private void ReleaseArrowsBuffers()
         {
-            _arrowsBuffer.Release();
-            _arrowsBuffer = null;
+            _magFieldArrowsBuffer.Release();
+            _magFieldArrowsBuffer = null;
         }
         private void ReleaseAllBuffers()
         {
@@ -224,7 +222,7 @@ namespace Particles
         {
             InitParticles();
             InitMagnet();
-            if(isArrows) InitArrows();
+            if(isArrows) InitMagFieldArrows();
 
         }
         private void FixedUpdate()
@@ -233,6 +231,11 @@ namespace Particles
             {
                 UpdateParticles();
             }
+
+           
+            Debug.Log(magnetCreator.Magnet.CalculateMagneticForce(_particles[0], Time.deltaTime));
+            
+
         }
         private void OnDisable ()
         {
@@ -245,24 +248,16 @@ namespace Particles
         private void GizmosDrawing()
         {
             Gizmos.color = Color.red;
-            if (_arrows == null)
-            {
-                return;
-            }
-            if (_particles == null)
-            {
-                return;
-            }
-            var pindex = 0;
+            if (_magFieldArrows == null) return;
+            if (_particles == null) return;
+            var i = 0;
             foreach(var p in _particles)
             {
-                var delta = pindex * (_magnets.Length + 1);
-                for (int i = 0; i <= _magnets.Length; i++)
-                {
-                    var pos1 = p.pos;
-                    var pos2 = _arrows[delta + i];
-                    Gizmos.DrawLine(pos1, pos2);
-                } 
+                var pos1 = p.pos;
+                var pos2 = pos1 + _magFieldArrows[i];
+                Gizmos.DrawLine(pos1, pos2);
+                i++;
+
             }
         }
     }
