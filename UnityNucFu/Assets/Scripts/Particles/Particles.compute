@@ -209,14 +209,24 @@ void generate_sphere(const uint uid)
     }
 }
 
-float3 calculate_magnetic_field(const float3 p,const mi magnet)
+float3 calculate_magnetic_field(const float3 p)
 {
-    const float3 dif_pos = p - magnet.pos;
-    const float distance = length(dif_pos);
-    const float constant = magnet.wire_number * MAGNETIC_CONST * magnet.cur / (4 * PI * pow(distance, 3.0));
-    const float3 vec1 = magnet.right * magnet.length;
-    const float3 cross_product = cross(vec1, dif_pos);
-    return constant * cross_product;
+    float3 magnetic_field = float3(0.0, 0.0, 0.0);
+    for(int i = 0; i < magnet_number; i ++)
+    {
+        const mi m = magnet[i];
+        const float3 dif_pos = p - m.pos;
+        const float distance = length(dif_pos);
+        const float3 dL = m.right * m.length;
+        if(distance != 0)
+        {
+            const float dB = m.wire_number * MAGNETIC_CONST * m.cur / (4 * PI * pow(distance, 3.0)) *
+                cross(dL, dif_pos) / pow(distance, 3);
+            magnetic_field += dB;
+            
+        }
+    }
+    return magnetic_field;
 }
 
 void move_vertices(const float3 p, const int id)
@@ -235,12 +245,7 @@ void move_sphere( const int id)
 {
     float3 magnetic_field = float3(0.0, 0.0, 0.0);
     particle p = particles[id];
-    for(int i = 0; i < magnet_number; i ++)
-    {
-        const float3 little_mag_field = calculate_magnetic_field(p.pos, magnet[i]);
-        arrows[id * (magnet_number + 1) + i] = little_mag_field;
-        magnetic_field += little_mag_field;
-    }
+    calculate_magnetic_field(p.pos);
     arrows[id * (magnet_number + 1) + magnet_number] = magnetic_field;
     const float3 magnetic_force = p.charge / p.mass * cross(p.dir, magnetic_field);
     const float3 old_pos = p.pos;
