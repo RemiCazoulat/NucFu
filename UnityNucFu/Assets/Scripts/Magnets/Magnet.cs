@@ -78,18 +78,19 @@ namespace Magnets
         // ----------------------------------------------------------------
         private Vector3 CalculateMagneticField(Vector3 p)
         {
-            Vector3 magneticField = Vector3.zero;
-            for(var i = 0; i < MagInfos.Count; i ++)
+            var magneticField = Vector3.zero;
+            foreach (var m in MagInfos)
             {
-                var m = MagInfos[i];
                 var difPos = p - m.Pos;
                 var distance = Vector3.Magnitude(difPos);
                 var dL = m.Right * m.Length;
-                if(distance != 0)
+                if (distance == 0)
                 {
-                    Vector3 dB = m.WireNumber * Const.MAGNETIC_CONST * m.Current / (4 * Const.PI) * Vector3.Cross(dL, difPos) / Mathf.Pow(distance, 3);
-                    magneticField += dB;
+                    continue;
                 }
+                var dB = m.WireNumber * Const.MAGNETIC_CONST * m.Current / (4 * Const.PI) * Vector3.Cross(dL, difPos) / Mathf.Pow(distance, 3);
+                magneticField += dB;
+                
             }
             return magneticField;
         }
@@ -98,6 +99,40 @@ namespace Magnets
             Vector3 magneticField = CalculateMagneticField(p.pos);
             Vector3 magneticForce = p.charge / p.mass * Vector3.Cross(p.vel, magneticField);
             return "time : " + time + "\n magnetic field : " + magneticField + "\n magnetic force : " + magneticForce;
+        }
+        private void DrawFieldLine(Vector3 startPoint, float lineLength, float stepSize)
+        {
+            List<Vector3> linePoints = new List<Vector3>();
+            Vector3 currentPoint = startPoint;
+            int maxIteration = (int)(lineLength / stepSize);
+            for (float t = 0; t < maxIteration; t ++)
+            {
+                Vector3 magneticField = CalculateMagneticField(currentPoint);
+                magneticField = magneticField.normalized * stepSize;
+                linePoints.Add(currentPoint);
+                currentPoint += magneticField;
+            }
+            LineRenderer lineRenderer = new GameObject("FieldLine").AddComponent<LineRenderer>();
+            lineRenderer.positionCount = linePoints.Count;
+            lineRenderer.SetPositions(linePoints.ToArray());
+            lineRenderer.startWidth = 0.02f;
+            lineRenderer.endWidth = 0.02f;
+            //lineRenderer.material = lineMaterial;
+        }
+
+        public void DrawFieldLines(Vector3 startPoint, float lineLength, int lineNumber, int floors, float spacing, float stepSize)
+        {
+            var z = 0f;
+            for (var i = 0; i < lineNumber; i++)
+            {
+                var x = i * spacing;
+                for(var j = 0; j < floors; j++)
+                {   
+                    var y = j * spacing;
+                    var newStartPoint = startPoint + new Vector3(x, y, z);
+                    DrawFieldLine(newStartPoint, lineLength, stepSize);
+                }
+            }
         }
         private void MakeRotation()
         {

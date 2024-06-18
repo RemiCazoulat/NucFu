@@ -8,15 +8,23 @@ namespace Magnets
         protected Mesh Mesh;
         [Button(nameof(CreateMagnet))]
         public bool buttonField;
+        public bool magneticFieldLines;
+        public Vector3 fieldLinesStartingPoint;
+        public float fieldLinesLength;
+        public int fieldLinesNumber;
+        public int fieldLinesFloorsNumber;
+        public float fieldLinesSpacing;
+        public float fieldLineStep;
         public abstract void CreateMagnet();
         private void Start()
         {
             CreateMagnet();
             Debug.Log(Magnet.ToString());
+            if(magneticFieldLines) Magnet.DrawFieldLines(fieldLinesStartingPoint, fieldLinesLength, fieldLinesNumber, fieldLinesFloorsNumber, fieldLinesSpacing, fieldLineStep);
         }
         private void OnDrawGizmos()
         {
-            Magnet?.GizmosDrawing();
+            //Magnet?.GizmosDrawing();
         }
         protected void AssignMesh() {
             Mesh.Clear();

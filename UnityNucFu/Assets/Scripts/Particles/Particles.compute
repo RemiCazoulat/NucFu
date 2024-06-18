@@ -246,14 +246,16 @@ void move_sphere( const int id)
     magneticFields[id] = magnetic_field;
     const float3 magnetic_force = p.charge / p.mass * cross(p.vel, magnetic_field);
     const float magnitude_force = length(magnetic_force);
-    if(magnitude_force != 0)
+    if(magnitude_force == 0)
     {
-        const float3 old_pos = p.pos;
-        p.vel += time * magnetic_force;
-        p.pos += time * p.vel;
-        move_vertices(p.pos - old_pos, id);
-        particles[id] = p;
+        return;
     }
+    const float3 old_pos = p.pos;
+    p.vel += time * magnetic_force;
+    p.pos += time * p.vel;
+    move_vertices(p.pos - old_pos, id);
+    particles[id] = p;
+    
 }
 
 [numthreads(128,1,1)]

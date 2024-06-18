@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Magnets\MagnetCreator.cs" />
     <Compile Include="Assets\Scripts\Utilities\Matrix3X3.cs" />
     <None Include="Assets\Scripts\Particles\Particles.compute" />
+    <None Include="Assets\Scripts\Magnets\Magnet.compute" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

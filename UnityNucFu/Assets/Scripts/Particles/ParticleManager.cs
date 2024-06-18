@@ -11,6 +11,7 @@ namespace Particles
         // ----------------------------{ ATTRIBUTES }----------------------------------
         // ----------------------------------------------------------------------------
         // ----{ PUBLIC ATTRIBUTES }----
+        public float timeStep;
         public float subStep;
         public int particleNumber;
         public float particleSize;
@@ -169,7 +170,8 @@ namespace Particles
         }
         private void GPUStepParticles()
         {
-            compute.SetFloat(_timeID, Time.deltaTime);
+            float realTimeStep = timeStep / subStep;
+            compute.SetFloat(_timeID, realTimeStep);
             compute.Dispatch(1, particleNumber / 128 + 1, 1, 1);
             _verticesBuffer.GetData(_vertices);
             _particlesBuffer.GetData(_particles);
@@ -179,7 +181,7 @@ namespace Particles
             // PRINTS
             //Debug.Log("particle's mag field == 0 : " + (_magFieldArrows[0] == Vector3.zero));
             //Debug.Log(_vertices[0]);
-            Debug.Log("particle vel : " + _particles[0].vel);
+            //Debug.Log("particle vel : " + _particles[0].vel);
         }
         private void SetParticles()
         {
@@ -233,7 +235,7 @@ namespace Particles
             }
 
            
-            Debug.Log(magnetCreator.Magnet.CalculateMagneticForce(_particles[0], Time.deltaTime));
+            //Debug.Log(magnetCreator.Magnet.CalculateMagneticForce(_particles[0], Time.deltaTime));
             
 
         }
