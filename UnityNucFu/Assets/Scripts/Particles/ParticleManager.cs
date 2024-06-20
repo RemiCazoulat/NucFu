@@ -233,11 +233,7 @@ namespace Particles
             {
                 UpdateParticles();
             }
-
-           
             //Debug.Log(magnetCreator.Magnet.CalculateMagneticForce(_particles[0], Time.deltaTime));
-            
-
         }
         private void OnDisable ()
         {
@@ -251,6 +247,7 @@ namespace Particles
         {
             Gizmos.color = Color.red;
             if (_magFieldArrows == null) return;
+            if (_magFieldArrows.Length == 0) return;
             if (_particles == null) return;
             var i = 0;
             foreach(var p in _particles)

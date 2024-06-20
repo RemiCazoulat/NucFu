@@ -11,6 +11,8 @@ public class Tore : BasicMagnet
     private float solenoidNumber;
     private float solenoidWidth;
     private float spirePrecision;
+    private float solenoidSpirePrecision;
+
     private uint spireNumber;
 
     public List<Solenoid> solenoids;
@@ -27,6 +29,7 @@ public class Tore : BasicMagnet
         float solenoidNumber,
         float solenoidWidth,
         float spirePrecision,
+        float solenoidSpirePrecision,
         uint spireNumber
     ) : base(position, wireRadius, resistivity, tension, squareSpace)
     {
@@ -36,6 +39,7 @@ public class Tore : BasicMagnet
         this.solenoidNumber = solenoidNumber;
         this.solenoidWidth = solenoidWidth;
         this.spirePrecision = spirePrecision;
+        this.solenoidSpirePrecision = solenoidSpirePrecision;
         this.spireNumber = spireNumber;
         this.spireNumber = spireNumber;
         
@@ -67,6 +71,7 @@ public class Tore : BasicMagnet
                 solenoidRadius , 
                 solenoidWidth, 
                 spirePrecision,
+                solenoidSpirePrecision,
                 spireNumber);
             
             solenoid.Direction = solenoidDirection;

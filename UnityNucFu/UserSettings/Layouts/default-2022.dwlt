@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -220,14 +220,14 @@ MonoBehaviour:
     y: 564.6667
     width: 907.3334
     height: 369.3333
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,8 +247,8 @@ MonoBehaviour:
     y: 0
     width: 569.33325
     height: 934
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -299,7 +299,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Particles
+    - Assets/Scripts/Magnets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -307,15 +307,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Particles
+  - Assets/Scripts/Magnets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\remi.cazoulat\Documents\GitHub\NucFu\UnityNucFu
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 8a5a0000
-    m_LastClickedID: 23178
+    m_SelectedIDs: 8c5a0000
+    m_LastClickedID: 23180
     m_ExpandedIDs: 00000000625a00006a5a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -369,9 +369,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 245a0000
+    m_LastClickedInstanceID: 23076
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -535,8 +535,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
+      m_SelectedIDs: 245a0000
+      m_LastClickedID: 23076
       m_ExpandedIDs: 30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -891,9 +891,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 77.006195, y: -16.067669, z: 73.409325}
+    m_Target: {x: 0.36339656, y: -0.21113761, z: -2.6979115}
     speed: 2
-    m_Value: {x: 77.006195, y: -16.067669, z: 73.409325}
+    m_Value: {x: 0.36339656, y: -0.21113761, z: -2.6979115}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -939,20 +939,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.067469545, y: 0.38121843, z: -0.027727716, w: 0.9217395}
+    m_Target: {x: 0.4451768, y: -0.19701861, z: 0.101178996, w: 0.8678242}
     speed: 2
-    m_Value: {x: 0.068354435, y: 0.3820638, z: -0.028173912, w: 0.9211739}
+    m_Value: {x: 0.44346225, y: -0.19631705, z: 0.10032319, w: 0.8687555}
   m_Size:
-    m_Target: 55.76264
+    m_Target: 2.1843264
     speed: 2
-    m_Value: 55.76264
+    m_Value: 2.0902646
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
   m_CameraSettings:
-    m_Speed: 0.001
-    m_SpeedNormalized: 0
+    m_Speed: 0.060969997
+    m_SpeedNormalized: 0.03
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1

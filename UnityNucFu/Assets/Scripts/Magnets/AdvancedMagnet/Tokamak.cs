@@ -27,10 +27,13 @@ public class Tokamak : Magnet
         float solenoidNumber,
         float solenoidWidth,
         float spirePrecision,
+        float solenoidSpirePrecision,
         uint spireNumber,
         
         float centralSolenoidRadius,
         float centralSolenoidSpirePrecision,
+        float centralSolenoidSolenoidSpirePrecision,
+
         uint centralSolenoidSpireNumber
         )
         : base(
@@ -48,6 +51,7 @@ public class Tokamak : Magnet
             solenoidNumber, 
             solenoidWidth, 
             spirePrecision, 
+            solenoidSpirePrecision,
             spireNumber);
         
         
@@ -60,8 +64,10 @@ public class Tokamak : Magnet
             centralSolenoidTension,
             squareSpace,
             csRadius,
-            Math.Abs(_tore.outerRadius - _tore.innerRadius) * 2, 
+            Math.Abs(_tore.outerRadius - _tore.innerRadius) * 1.5f, 
             centralSolenoidSpirePrecision,
+            centralSolenoidSolenoidSpirePrecision,
+            
             centralSolenoidSpireNumber
             );
         _centralSolenoid.SetDirectionVectors(Up, Vector3.Cross(Up, Right), Right);

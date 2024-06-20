@@ -8,9 +8,9 @@ namespace Magnets
     public abstract class Magnet 
     {
         public Vector3 Position;
-        private float yaw;
-        private float pitch;
-        private float roll;
+        private float _yaw;
+        private float _pitch;
+        private float _roll;
         public Vector3 Direction; // Radian
         public Vector3 Up; // Radian 
         public Vector3 Right; // Radian
@@ -33,9 +33,9 @@ namespace Magnets
         public void ModifyRotation(Vector3 rotation)
         {
             var modifyRot = rotation * Const.PI / 180;
-            yaw = modifyRot.x % (2.0f * Const.PI);
-            pitch = modifyRot.y % (2.0f * Const.PI);
-            roll = modifyRot.z % (2.0f * Const.PI);
+            _yaw = modifyRot.x % (2.0f * Const.PI);
+            _pitch = modifyRot.y % (2.0f * Const.PI);
+            _roll = modifyRot.z % (2.0f * Const.PI);
             MakeRotation();
         }
         public void SetDirectionVectors(Vector3 d, Vector3 u, Vector3 r)
@@ -76,6 +76,7 @@ namespace Magnets
         // ----------------------------------------------------------------
         // ----------{ MATHS METHODS }-------------------------------------
         // ----------------------------------------------------------------
+        
         private Vector3 CalculateMagneticField(Vector3 p)
         {
             var magneticField = Vector3.zero;
@@ -119,7 +120,15 @@ namespace Magnets
             lineRenderer.endWidth = 0.02f;
             //lineRenderer.material = lineMaterial;
         }
-
+        /// <summary>
+        /// Draw field lines in a grid
+        /// </summary>
+        /// <param name="startPoint"></param>
+        /// <param name="lineLength"></param>
+        /// <param name="lineNumber"></param>
+        /// <param name="floors"></param>
+        /// <param name="spacing"></param>
+        /// <param name="stepSize"></param>
         public void DrawFieldLines(Vector3 startPoint, float lineLength, int lineNumber, int floors, float spacing, float stepSize)
         {
             var z = 0f;
@@ -134,14 +143,37 @@ namespace Magnets
                 }
             }
         }
+
+        public void DrawMagneticField(Vector3 plane, int gridSize, float gridStep)
+        {
+            int dotsNumber = (int)(gridSize / gridStep);
+            plane = plane.normalized;
+            Vector3 y = new Vector3(-plane.y, plane.x, plane.z);
+            Vector3 z = Vector3.Cross(plane, y);
+            
+            
+            
+            for (int i = - dotsNumber / 2; i < dotsNumber / 2; i++)
+            {
+                for(int j = - dotsNumber / 2; j <  dotsNumber / 2 ; j ++)
+                {
+                    Vector3 p =  Position + y * i * gridStep + z * j * gridStep;
+                    Debug.Log("p : " + p);
+                    Vector3 magneticField = CalculateMagneticField(p);
+                    Debug.Log("mf : " + magneticField);
+
+                    Debug.DrawLine(p, p + magneticField.normalized * gridStep, Color.red, 1000f);
+                }
+            }
+        }
         private void MakeRotation()
         {
             Direction = new Vector3(1, 0, 0);
             Up = new Vector3(0, 1, 0);
             Right = new Vector3(0, 0, 1);
-            var rotX = RotationX(yaw);
-            var rotY = RotationY(pitch);
-            var rotZ = RotationZ(roll);
+            var rotX = RotationX(_yaw);
+            var rotY = RotationY(_pitch);
+            var rotZ = RotationZ(_roll);
             var rotationMatrix = rotZ * rotY * rotX;
             Direction = Matrix3X3.MatVecMultiply(rotationMatrix, Direction);
             Up = Matrix3X3.MatVecMultiply(rotationMatrix, Up);

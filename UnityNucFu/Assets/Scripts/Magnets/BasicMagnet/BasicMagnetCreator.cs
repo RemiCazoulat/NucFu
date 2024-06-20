@@ -20,24 +20,20 @@ public class BasicMagnetCreator : MagnetCreator
     [Min(0f)]public float wireRadius; // m
     [Min(0f)]public float resistivity; // Ohm . m
     [Min(0f)]public float tension; // V
-    [Range(0.1f, 0.9f)] public float squareSpace; // %
+    [Range(0f, 1f)] public float squareSpace; // %
     public uint wireNumber;
     [Space(10)]
     [Header ("Only ElectroMagnet :")]
     [Space(5)]
     [Min(0f)]public float length;
-    [Space(10)]
-    [Header ("Only ElectroMagnet & Spire :")]
-    [Space(5)]
     [Min(0f)]public float thickness;
     [Space(10)]
-    [Header ("Only Spire & Solenoid & Tore:")]
+    [Header ("Only Solenoid & Tore:")]
     [Space(5)]
     [Min(0f)]public float spireRadius; // m
     [Min(0f)]public float spirePrecision; // magnet / m   
-    [Space(10)]
-    [Header ("Only Solenoid & Tore :")]
-    [Space(5)]
+    [Min(0f)]public float solenoidSpirePrecision; // spire / m   
+
     [Min(0f)]public float solenoidWidth; // m
     [Header("Only Tore :")] 
     [Min(0f)] public float toreRadius;
@@ -67,6 +63,7 @@ public class BasicMagnetCreator : MagnetCreator
                    spireRadius,
                    solenoidWidth,
                    spirePrecision,
+                   solenoidSpirePrecision,
                    wireNumber);
                break;
            case MagnetType.Tore :
@@ -81,6 +78,7 @@ public class BasicMagnetCreator : MagnetCreator
                    solenoidNumber, 
                    solenoidWidth, 
                    spirePrecision, 
+                   solenoidSpirePrecision,
                    wireNumber);
                break;
        }
