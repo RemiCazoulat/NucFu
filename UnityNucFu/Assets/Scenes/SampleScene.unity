@@ -959,17 +959,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonField: 0
-  magneticFieldLines: 1
+  magneticFieldLines: 0
   fieldLinesStartingPoint: {x: 0, y: 0, z: 0}
   fieldLinesLength: 20
   fieldLinesNumber: 5
   fieldLinesFloorsNumber: 1
   fieldLinesSpacing: 3
   fieldLineStep: 0.2
-  drawMagneticField: 0
-  drawingPlane: {x: 0, y: 1, z: 0}
-  drawingPlaneSize: 15
-  drawingPlaneStep: 0.5
+  drawMagneticField: 1
+  drawingPlane: {x: 1, y: 0, z: 0}
+  drawingPlaneSize: 50
+  drawingPlaneStep: 3
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   squareSpace: 0

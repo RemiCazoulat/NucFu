@@ -191,6 +191,9 @@ namespace Particles
                 _particles[i] = new Particle(pos + particlePosition, particleVelocity, particleCharge, particleMass);
             }
         }
+        /// <summary>
+        /// Release all the buffers used by the particles.
+        /// </summary>
         private void ReleaseParticlesBuffers()
         {
             _intermediateTrianglesBuffer.Release();

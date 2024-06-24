@@ -1,0 +1,15 @@
+[submodule "GLNucFu/thirdparty/glfw/glfw"]
+	path = GLNucFu/thirdparty/glfw/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "GLNucFu/thirdparty/--force"]
+	path = GLNucFu/thirdparty/--force
+	url = https://github.com/glfw/glfw.git
+[submodule "GLNucFu/thirdparty/glfw"]
+	path = GLNucFu/thirdparty/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "GLNucFu/thirdparty/glew"]
+	path = GLNucFu/thirdparty/glew
+	url = https://github.com/nigels-com/glew.git
+[submodule "GLNucFu/thirdparty/glm"]
+	path = GLNucFu/thirdparty/glm
+	url = https://github.com/g-truc/glm.git
