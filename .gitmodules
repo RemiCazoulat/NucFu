@@ -13,3 +13,6 @@
 [submodule "GLNucFu/thirdparty/glm"]
 	path = GLNucFu/thirdparty/glm
 	url = https://github.com/g-truc/glm.git
+[submodule "GLNucFu/thirdparty/glad"]
+	path = GLNucFu/thirdparty/glad
+	url = https://github.com/Dav1dde/glad.git

@@ -326,6 +326,9 @@ GLEW_REGAL:BOOL=OFF
 //X11 mode
 GLEW_X11:BOOL=ON
 
+//The directory containing a CMake configuration file for GLFW3.
+GLFW3_DIR:PATH=GLFW3_DIR-NOTFOUND
+
 //Value Computed by CMake
 GLFW_BINARY_DIR:STATIC=C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/thirdparty/glfw
 
