@@ -74,6 +74,9 @@ int main() {
     // ---------- { Main render loop }----------
     while (!glfwWindowShouldClose(window)) {
 
+        glUseProgram(computeProgram);
+
+
         glUseProgram(shaderProgram);
         render();
         // Swap buffers and poll for events

@@ -2,9 +2,14 @@
 
 layout (local_size_x = 16, local_size_y = 16) in;
 
+uniform sampler2D img_input;
+
 layout (rgba32f, binding = 0) uniform image2D img_output;
 
+
 void main() {
+
+    /*
     // Aucun tableau de donnée n'étant passé au moment de la création de la texture,
     // c'est le compute shader qui va dessiner à l'intérieur de l'image associé
     // à la texture.
@@ -22,4 +27,9 @@ void main() {
     }
 
     imageStore(img_output, coords, pixel);
+    */
+    ivec2 coords = ivec2(gl_GlobalInvocationID);
+    vec4 pixel =  vec4(1., 1., 1., 1.);
+    imageStore(img_output, coords, pixel);
+
 }

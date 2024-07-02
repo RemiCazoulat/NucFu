@@ -9,5 +9,7 @@
 
 void printWorkGroupsCapabilities();
 GLuint createComputeProgram(const char* computePath);
+void execute(const GLuint texID, const int width,const int height);
+
 
 #endif //COMPUTE_H

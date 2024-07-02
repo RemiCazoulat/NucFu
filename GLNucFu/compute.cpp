@@ -70,7 +70,7 @@ GLuint createComputeProgram(const char* shaderSource) {
     return program;
 }
 */
-void execute(const GLuint texID, int width, int height) {
+void execute(const GLuint texID, const int width,const int height) {
     glUseProgram(program);
     glBindTexture(GL_TEXTURE_2D, texID);
     glBindImageTexture (0, texID, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
