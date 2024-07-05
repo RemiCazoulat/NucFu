@@ -4,8 +4,6 @@
 #include "compute.h"
 #include "shader.h"
 
-GLuint program;
-
 void printWorkGroupsCapabilities() {
     int workgroup_count[3];
     int workgroup_size[3];
@@ -28,7 +26,7 @@ GLuint createComputeProgram(const char* computePath) {
     printWorkGroupsCapabilities();
     const std::string computeCode = readShaderCode(computePath);
     const GLuint computeShader = compileShader(computeCode.c_str(), GL_COMPUTE_SHADER);
-    program = glCreateProgram();
+    const GLuint program = glCreateProgram();
     glAttachShader(program, computeShader);
     glLinkProgram(program);
     GLint success;
@@ -42,41 +40,18 @@ GLuint createComputeProgram(const char* computePath) {
     glDeleteShader(computeShader);
     return program;
 }
-/*
-GLuint createComputeProgram(const char* shaderSource) {
-    printWorkGroupsCapabilities();
-    const GLuint shader = glCreateShader(GL_COMPUTE_SHADER);
-    glShaderSource(shader, 1, &shaderSource, nullptr);
-    glCompileShader(shader);
-    GLint success;
-    glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
-    if (!success) {
-        char infoLog[512];
-        glGetShaderInfoLog(shader, 512, nullptr, infoLog);
-        std::cerr << "Erreur de compilation du shader : " << infoLog << std::endl;
-        return 0;
-    }
-    const GLuint program = glCreateProgram();
-    glAttachShader(program, shader);
-    glLinkProgram(program);
-    glGetProgramiv(program, GL_LINK_STATUS, &success);
-    if (!success) {
-        char infoLog[512];
-        glGetProgramInfoLog(program, 512, nullptr, infoLog);
-        std::cerr << "Erreur de linkage du programme : " << infoLog << std::endl;
-        return 0;
-    }
-    glDeleteShader(shader);
-    return program;
-}
-*/
-void execute(const GLuint texID, const int width,const int height) {
+// Function to execute a compute shader
+void execute(const GLuint & program, const GLuint & velTex, const GLuint & densTex,  const int & width,const int & height) {
     glUseProgram(program);
-    glBindTexture(GL_TEXTURE_2D, texID);
-    glBindImageTexture (0, texID, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
-    glDispatchCompute(width,height,1);
+    glBindImageTexture (0, velTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RG32F);
+    glBindImageTexture (1, densTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+
+    glDispatchCompute(width / 64,height / 1,1);
+
     glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
-    glBindImageTexture (0, 0, 0, GL_FALSE, 0, GL_WRITE_ONLY, GL_RGBA32F);
-    glBindTexture(GL_TEXTURE_2D, 0);
     glUseProgram(0);
+}
+
+void cleanCompute(const GLuint & computeShader) {
+    glDeleteProgram(computeShader);
 }

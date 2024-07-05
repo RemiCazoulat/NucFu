@@ -27,20 +27,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4fcd0b94-fcc7-4b00-96d0-9f5614f8b528" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/codemodel-v2-f59ba8f4e44a8468ca23.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/index-2024-06-28T12-41-01-0879.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/.cmake/api/v1/reply/target-GLNucFu-Release-e6b42ff85386821a33a6.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/compute.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/compute.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/fluid2D.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/fluid2D.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/shader.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/GLNucFu.dir/shader.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-release/GLNucFu.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/GLNucFu.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compute.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/compute.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compute.h" beforeDir="false" afterPath="$PROJECT_DIR$/compute.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fluid2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fluid2D.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glsl/cshader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/glsl/cshader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsl/fshader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/glsl/fshader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/shader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shader.h" beforeDir="false" afterPath="$PROJECT_DIR$/shader.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/compute.h" root0="FORCE_HIGHLIGHTING" />
@@ -89,7 +90,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -176,7 +177,11 @@
       <workItem from="1719913804371" duration="3238000" />
       <workItem from="1719922901956" duration="10000" />
       <workItem from="1719923297392" duration="45000" />
-      <workItem from="1719925407891" duration="2720000" />
+      <workItem from="1719925407891" duration="3469000" />
+      <workItem from="1720084406389" duration="576000" />
+      <workItem from="1720085105446" duration="1387000" />
+      <workItem from="1720086516702" duration="21014000" />
+      <workItem from="1720187372100" duration="2330000" />
     </task>
     <servers />
   </component>

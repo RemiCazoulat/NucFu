@@ -3,10 +3,6 @@
 //
 #include "shader.h"
 
-GLuint shaderProgram;
-
-
-GLuint tex;
 
 constexpr float vertices[] = {
     -1.0f,  1.0f, 0.0f, 0.0f, 1.0f,
@@ -19,6 +15,8 @@ constexpr unsigned int indices[] = {
     0, 3, 2
 };
 GLuint VAO, VBO, EBO;
+
+
 std::string readShaderCode(const char* filePath) {
     std::ifstream shaderFile(filePath);
     if (!shaderFile.is_open()) {
@@ -51,7 +49,7 @@ GLuint createShaderProgram(const char* vertexPath, const char* fragmentPath) {
     const std::string fragmentCode = readShaderCode(fragmentPath);
     const GLuint vertexShader = compileShader(vertexCode.c_str(), GL_VERTEX_SHADER);
     const GLuint fragmentShader = compileShader(fragmentCode.c_str(), GL_FRAGMENT_SHADER);
-    shaderProgram = glCreateProgram();
+    const GLuint shaderProgram = glCreateProgram();
     glAttachShader(shaderProgram, vertexShader);
     glAttachShader(shaderProgram, fragmentShader);
     glLinkProgram(shaderProgram);
@@ -98,42 +96,33 @@ void createGeometry() {
     glBindVertexArray(0);
 
 }
-void createUniform1f(const GLchar* name, const float & value) {
+void createUniform1f(const GLuint & shaderProgram, const GLchar* name, const float & value) {
     const GLint location = glGetUniformLocation(shaderProgram, name);
     glUniform1f(location, value);
 }
 
-void createUniformTexVec2(const GLchar* name, const int & width, const int & height, const GLfloat* data, const int & texture) {
-
+void bindingUniformTex(const GLuint & shaderProgram, const GLchar * name, const int & bindIndex) {
     const GLint texLoc = glGetUniformLocation(shaderProgram, name);
-    glGenTextures(1, &tex);
-    glBindTexture(GL_TEXTURE_2D, tex);
-    glTexImage2D(
-        GL_TEXTURE_2D,
-        0,
-        GL_RG32F,
-        width,
-        height,
-        0,
-        GL_RG,
-        GL_FLOAT,
-        data);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-    glBindTexture(GL_TEXTURE_2D, texture);
-    // Set the texture uniform to use texture unit 0
-    glUniform1i(texLoc, texture);
+    glUniform1i(texLoc, bindIndex);
 }
 
-void render() {
+
+void render(const GLuint & shaderProgram, const GLuint & velTex, const GLuint & densTex) {
+    glUseProgram(shaderProgram);
     glClear(GL_COLOR_BUFFER_BIT);
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, tex);
+    glBindTexture(GL_TEXTURE_2D, velTex);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, densTex);
     glBindVertexArray(VAO);
+
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
+
+    glBindVertexArray(0);
+    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-void cleanShader() {
+void cleanShader(const GLuint & shaderProgram) {
     glDeleteProgram(shaderProgram);
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);

@@ -10,9 +10,9 @@ std::string readShaderCode(const char* filePath);
 GLuint compileShader(const char* shaderCode, GLenum shaderType);
 GLuint createShaderProgram(const char* vertexPath, const char* fragmentPath);
 void createGeometry();
-void createUniform1f(const GLchar* name, const float & value);
-void createUniformTexVec2(const GLchar* name, const int & width, const int & height, const GLfloat* data, const int & texture);
-void render();
-void cleanShader();
+void createUniform1f(const GLuint & shaderProgram, const GLchar* name, const float & value);
+void bindingUniformTex(const GLuint & shaderProgram, const GLchar * name, const int & bindIndex);
+void render(const GLuint & shaderProgram, const GLuint & velTex, const GLuint & densTex);
+void cleanShader(const GLuint & shaderProgram);
 
 #endif //SHADER_H

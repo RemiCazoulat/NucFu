@@ -9,7 +9,8 @@
 
 void printWorkGroupsCapabilities();
 GLuint createComputeProgram(const char* computePath);
-void execute(const GLuint texID, const int width,const int height);
+void execute(const GLuint & program, const GLuint & velTex, const GLuint & densTex,  const int & width,const int & height);
+void cleanCompute(const GLuint & computeShader);
 
 
 #endif //COMPUTE_H

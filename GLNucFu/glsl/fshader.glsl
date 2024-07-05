@@ -9,8 +9,10 @@ uniform float gridHeight;
 uniform float pixelPerCell;
 
 uniform sampler2D velTex;
+uniform sampler2D densTex;
+
 
 void main(){
-    vec2 currentVel = texture(velTex, TexCoords).xy;
-    fragColor = vec4(0.0, currentVel, 1.0);
+    vec3 currentDens = texture(densTex, TexCoords).xxx;
+    fragColor = vec4(currentDens, 1.0);
 }
