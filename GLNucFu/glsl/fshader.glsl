@@ -4,9 +4,9 @@ in vec2 TexCoords;
 
 out vec4 fragColor;
 
-uniform float gridWidth;
-uniform float gridHeight;
-uniform float pixelPerCell;
+uniform int gridWidth;
+uniform int gridHeight;
+uniform int pixelPerCell;
 
 uniform sampler2D velTex;
 uniform sampler2D densTex;
