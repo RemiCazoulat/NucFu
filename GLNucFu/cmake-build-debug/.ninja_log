@@ -1,5 +1,31 @@
-# ninja log v6
-2	286	7412816619286890	build.ninja	da95b4ee6959b42
-10	568	7409388462903339	CMakeFiles/GLNucFu.dir/main.cpp.obj	e5f774ac9f7432de
-2	15	7409388438790236	clean	9b482ce92dccbea9
-9	131	7409391996677042	GLNucFu.exe	b8616bb901b8961e
+# ninja log v5
+89	764	7421624070565186	thirdparty/glfw/src/CMakeFiles/glfw.dir/window.c.obj	7a272794f2b7c3d9
+74	776	7421624070658068	thirdparty/glfw/src/CMakeFiles/glfw.dir/platform.c.obj	ac00a3790006b681
+64	784	7421624070668045	thirdparty/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	2da8cfacaf1bac08
+102	791	7421624070668045	thirdparty/glfw/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	a1cc15cb91a4e3bd
+81	799	7421624070658068	thirdparty/glfw/src/CMakeFiles/glfw.dir/vulkan.c.obj	db1aa5d78f600c26
+49	807	7421624070678075	thirdparty/glfw/src/CMakeFiles/glfw.dir/init.c.obj	8f2d9ec97a63972d
+95	814	7421624070689059	thirdparty/glfw/src/CMakeFiles/glfw.dir/egl_context.c.obj	115f14037c53d5f6
+41	822	7421624070709479	thirdparty/glfw/src/CMakeFiles/glfw.dir/context.c.obj	9a2b3e86ff69d1e0
+57	829	7421624070719469	thirdparty/glfw/src/CMakeFiles/glfw.dir/input.c.obj	e9331fc5f4c40051
+109	837	7421624070760467	thirdparty/glfw/src/CMakeFiles/glfw.dir/null_init.c.obj	e7ddfac100673a87
+30	970	7421624072635694	CMakeFiles/glad.dir/thirdparty/glad/src/glad.c.obj	7e14e49642a3091
+971	1083	7421624073632092	glad.lib	d80f7123f8830de5
+766	1325	7421624076197572	thirdparty/glfw/src/CMakeFiles/glfw.dir/null_monitor.c.obj	3eb841edd59c085a
+814	1362	7421624076549826	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	e5c100b0200a0dd8
+799	1364	7421624076539150	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj	5dd4ed966ec1da82
+784	1374	7421624076672565	thirdparty/glfw/src/CMakeFiles/glfw.dir/null_joystick.c.obj	5d057630231a5ba1
+792	1375	7421624076672565	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_module.c.obj	d68bdc93c3e003c5
+776	1392	7421624076828887	thirdparty/glfw/src/CMakeFiles/glfw.dir/null_window.c.obj	1d93f633fb5fb890
+807	1393	7421624076858862	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_thread.c.obj	d7b612701bf68b61
+822	1401	7421624076948858	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	42ffd008cb513aaa
+830	1423	7421624077171945	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	28eab2b5f39790ce
+837	1435	7421624077294911	thirdparty/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	cc392ed4b39f085e
+1083	1552	7421624078478111	thirdparty/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj	a1e4b418f0e8a84a
+1552	1637	7421624079258734	thirdparty/glfw/src/glfw3.lib	2084c6a4cb1ed7b
+7	1740	7421624080347097	CMakeFiles/GLNucFu.dir/fluid2D.cpp.obj	1bc2f4e7220a3ab5
+16	1742	7421624080337056	CMakeFiles/GLNucFu.dir/compute.cpp.obj	cc85ec060bd1e424
+23	1792	7421624080851078	CMakeFiles/GLNucFu.dir/shader.cpp.obj	cfa1ae14ada64cb6
+1325	2979	7421624092689363	thirdparty/glm/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj	bba12ece222330d3
+2979	3060	7421624093387957	thirdparty/glm/glm/glm.lib	d3f6622817e6effb
+3060	3471	7421624097457001	GLNucFu.exe	7d8578d36181fcb8

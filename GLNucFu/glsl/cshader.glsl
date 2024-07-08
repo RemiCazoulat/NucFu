@@ -86,13 +86,6 @@ float diffusion(ivec2 coord) {
 void main() {
 
     ivec2 coord = ivec2(gl_GlobalInvocationID.xy);
-    //float diffusedDens = diffusion(coord);
-    //float advectedDens = advection(coord);
-    //float nextDens = diffusedDens;
-    //imageStore(density, coord, vec4(nextDens, 0.0, 0.0, 0.0));
-
-
-
     bool isBound = checkBoundaries(coord);
     float density = 0.0;
     if (!isBound) {

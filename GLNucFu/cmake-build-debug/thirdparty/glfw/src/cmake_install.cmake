@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src
+# Install script for directory: C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,12 +32,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/objdump.exe")
-endif()
-
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/thirdparty/glfw/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/thirdparty/glfw/src/glfw3.lib")
 endif()
 

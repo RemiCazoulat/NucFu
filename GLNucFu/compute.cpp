@@ -41,18 +41,14 @@ GLuint createComputeProgram(const char* computePath) {
     return program;
 }
 // Function to execute a compute shader
-void execute(const GLuint & program, const GLuint & velTex, const GLuint & densTex,  const int & width,const int & height) {
+void execute(const GLuint & program, const GLuint & densTexTransit, const int & width, const int & height) {
     glUseProgram(program);
-    //glBindImageTexture (0, velTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RG32F);
-    //glBindImageTexture (1, densTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+    glBindImageTexture (2, densTexTransit, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+    for(int i = 0; i < 20; i ++) {
+        glDispatchCompute(width / 64,height / 1,1);
+        glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
 
-    GLfloat
-
-    glBindImageTexture (2, densTexTransi, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
-
-    glDispatchCompute(width / 64,height / 1,1);
-
-    glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+    }
 }
 
 void cleanCompute(const GLuint & computeShader) {

@@ -4,523 +4,154 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Windows - 10.0.19045 - AMD64
+      The system is: Windows - 10.0.22631 - AMD64
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe 
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
+      Compilateur d'optimisation Microsoft (R) C/C++ version 19.38.33133 pour x64
+      Copyright (C) Microsoft Corporation. Tous droits réservés.
+      
+      CMakeCCompilerId.c
+      Microsoft (R) Incremental Linker Version 14.38.33133.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCCompilerId.exe 
+      CMakeCCompilerId.obj 
       
       
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
       
-      The C compiler identification is GNU, found in:
-        C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/a.exe
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdC/CMakeCCompilerId.exe
       
   -
     kind: "message-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1182 (message)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:247 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting C compiler /showIncludes prefix:
+        main.c
+        Remarque : inclusion du fichier :  C:\\Users\\Rémi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Remarque : inclusion du fichier :  "
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe 
+      Compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe 
       Build flags: 
       Id flags:  
       
       The output was:
       0
+      Compilateur d'optimisation Microsoft (R) C/C++ version 19.38.33133 pour x64
+      Copyright (C) Microsoft Corporation. Tous droits réservés.
+      
+      CMakeCXXCompilerId.cpp
+      Microsoft (R) Incremental Linker Version 14.38.33133.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+      
+      /out:CMakeCXXCompilerId.exe 
+      CMakeCXXCompilerId.obj 
       
       
-      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
       
-      The CXX compiler identification is GNU, found in:
-        C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/a.exe
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
       
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/3.28.1/CompilerIdCXX/CMakeCXXCompilerId.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1182 (message)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:247 (CMAKE_DETERMINE_MSVC_SHOWINCLUDES_PREFIX)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Detecting CXX compiler /showIncludes prefix:
+        main.c
+        Remarque : inclusion du fichier :  C:\\Users\\Rémi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\ShowIncludes\\foo.h
+        
+      Found prefix "Remarque : inclusion du fichier :  "
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wlcvin"
-      binary: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wlcvin"
+      source: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wgm80z"
+      binary: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wgm80z"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wlcvin'
+        Change Dir: 'C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wgm80z'
         
-        Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_95ac6
-        [1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj -c C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c
-        Using built-in specs.
-        COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-        Thread model: posix
-        Supported LTO compression algorithms: zlib
-        gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/'
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_95ac6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccmC7oDA.s
-        GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
-        ignoring nonexistent directory "/win/include"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
-        ignoring nonexistent directory "/mingw/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
-        End of search list.
-        Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/'
-         as -v -o CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccmC7oDA.s
-        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
-        COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.'\x0d
-        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj -o cmTC_95ac6.exe -Wl,--out-implib,libcmTC_95ac6.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Using built-in specs.
-        COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
-        COLLECT_LTO_WRAPPER=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-        Thread model: posix
-        Supported LTO compression algorithms: zlib
-        gcc version 13.1.0 (GCC) 
-        COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_95ac6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_95ac6.'
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_95ac6.exe C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_95ac6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_95ac6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_95ac6.'\x0d
+        Run Build Command(s): C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_8c619
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_8c619.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_8c619.dir\\ /FS -c C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_8c619.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8c619.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_8c619.exe /implib:cmTC_8c619.lib /pdb:cmTC_8c619.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed C implicit include dir info: rv=done
-        found start of include info
-        found start of implicit include info
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
-        end of search list found
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/include]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
-        implicit include dirs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-wlcvin']
-        ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_95ac6]
-        ignore line: [[1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj -c C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/']
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_95ac6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccmC7oDA.s]
-        ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
-        ignore line: [ignoring nonexistent directory "/win/include"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
-        ignore line: [ignoring nonexistent directory "/mingw/include"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
-        ignore line: [End of search list.]
-        ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccmC7oDA.s]
-        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
-        ignore line: [COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.'\x0d]
-        ignore line: [[2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj -o cmTC_95ac6.exe -Wl --out-implib libcmTC_95ac6.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_95ac6.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_95ac6.']
-        link line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_95ac6.exe C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_95ac6.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
-          arg [-m] ==> ignore
-          arg [i386pep] ==> ignore
-          arg [-Bdynamic] ==> search dynamic
-          arg [-o] ==> ignore
-          arg [cmTC_95ac6.exe] ==> ignore
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_95ac6.dir/CMakeCCompilerABI.c.obj] ==> ignore
-          arg [--out-implib] ==> ignore
-          arg [libcmTC_95ac6.dll.a] ==> ignore
-          arg [--major-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [--minor-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-lpthread] ==> lib [pthread]
-          arg [-ladvapi32] ==> lib [advapi32]
-          arg [-lshell32] ==> lib [shell32]
-          arg [-luser32] ==> lib [user32]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-liconv] ==> lib [iconv]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_eh] ==> lib [gcc_eh]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        remove lib [gcc_eh]
-        remove lib [msvcrt]
-        remove lib [gcc_eh]
-        remove lib [msvcrt]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
-        implicit objs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        implicit dirs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        implicit fwks: []
-      
-      
-  -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c7futg"
-      binary: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c7futg"
+      source: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gej67h"
+      binary: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gej67h"
     cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c7futg'
+        Change Dir: 'C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-gej67h'
         
-        Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_cb0cc
-        [1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
-        Using built-in specs.
-        COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-        Thread model: posix
-        Supported LTO compression algorithms: zlib
-        gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/'
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_cb0cc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccumi7ag.s
-        GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
-        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
-        ignoring nonexistent directory "/win/include"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
-        ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
-        ignoring nonexistent directory "/mingw/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
-        End of search list.
-        Compiler executable checksum: e75de627edc3c57e31324b930b15b056
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/'
-         as -v -o CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccumi7ag.s
-        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
-        COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_cb0cc.exe -Wl,--out-implib,libcmTC_cb0cc.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
-        Using built-in specs.
-        COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
-        COLLECT_LTO_WRAPPER=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
-        Target: x86_64-w64-mingw32
-        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
-        Thread model: posix
-        Supported LTO compression algorithms: zlib
-        gcc version 13.1.0 (GCC) 
-        COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
-        LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb0cc.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_cb0cc.'
-         C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_cb0cc.exe C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_cb0cc.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb0cc.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_cb0cc.'\x0d
+        Run Build Command(s): C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_d526e
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_d526e.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_d526e.dir\\ /FS -c C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_d526e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_d526e.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_d526e.exe /implib:cmTC_d526e.lib /pdb:cmTC_d526e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed CXX implicit include dir info: rv=done
-        found start of include info
-        found start of implicit include info
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-          add: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
-        end of search list found
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/include]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        collapse include dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
-        implicit include dirs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
-    message: |
-      Parsed CXX implicit link information:
-        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-c7futg']
-        ignore line: []
-        ignore line: [Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_cb0cc]
-        ignore line: [[1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/']
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_cb0cc.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccumi7ag.s]
-        ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
-        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
-        ignore line: [ignoring nonexistent directory "/win/include"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
-        ignore line: [ignoring duplicate directory "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
-        ignore line: [ignoring nonexistent directory "/mingw/include"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
-        ignore line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
-        ignore line: [End of search list.]
-        ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\REMI~1.CAZ\\AppData\\Local\\Temp\\ccumi7ag.s]
-        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
-        ignore line: [COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_cb0cc.exe -Wl --out-implib libcmTC_cb0cc.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
-        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
-        ignore line: [Target: x86_64-w64-mingw32]
-        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib]
-        ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COMPILER_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
-        ignore line: [LIBRARY_PATH=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cb0cc.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_cb0cc.']
-        link line: [ C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_cb0cc.exe C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_cb0cc.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
-          arg [-m] ==> ignore
-          arg [i386pep] ==> ignore
-          arg [-Bdynamic] ==> search dynamic
-          arg [-o] ==> ignore
-          arg [cmTC_cb0cc.exe] ==> ignore
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
-          arg [-LC:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
-          arg [CMakeFiles/cmTC_cb0cc.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
-          arg [--out-implib] ==> ignore
-          arg [libcmTC_cb0cc.dll.a] ==> ignore
-          arg [--major-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [--minor-image-version] ==> ignore
-          arg [0] ==> ignore
-          arg [-lstdc++] ==> lib [stdc++]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-lpthread] ==> lib [pthread]
-          arg [-ladvapi32] ==> lib [advapi32]
-          arg [-lshell32] ==> lib [shell32]
-          arg [-luser32] ==> lib [user32]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [-liconv] ==> lib [iconv]
-          arg [-lmingw32] ==> lib [mingw32]
-          arg [-lgcc_s] ==> lib [gcc_s]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lmoldname] ==> lib [moldname]
-          arg [-lmingwex] ==> lib [mingwex]
-          arg [-lmsvcrt] ==> lib [msvcrt]
-          arg [-lkernel32] ==> lib [kernel32]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
-          arg [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        remove lib [msvcrt]
-        remove lib [msvcrt]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
-        collapse obj [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
-        collapse library dir [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
-        implicit objs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        implicit dirs: [C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/mingw/lib]
-        implicit fwks: []
-      
-      
 ...
 
 ---
@@ -528,82 +159,99 @@ events:
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
       - "thirdparty/glfw/CMakeLists.txt:60 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-92u0e5"
-      binary: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-92u0e5"
+      source: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tlnxfg"
+      binary: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tlnxfg"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-92u0e5'
+        Change Dir: 'C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tlnxfg'
         
-        Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_606e6
-        [1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_606e6.dir/src.c.obj -c C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-92u0e5/src.c
-        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_606e6.dir/src.c.obj -o cmTC_606e6.exe -Wl,--out-implib,libcmTC_606e6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_70b06
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_70b06.dir\\src.c.obj /FdCMakeFiles\\cmTC_70b06.dir\\ /FS -c C:\\Users\\R├®mi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-tlnxfg\\src.c
+        FAILED: CMakeFiles/cmTC_70b06.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_70b06.dir\\src.c.obj /FdCMakeFiles\\cmTC_70b06.dir\\ /FS -c C:\\Users\\R├®mi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-tlnxfg\\src.c
+        C:\\Users\\Rémi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-tlnxfg\\src.c(1): fatal error C1083: Impossible d'ouvrir le fichier include : 'pthread.h' : No such file or directory
+        ninja: build stopped: subcommand failed.
         
-      exitCode: 0
+      exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
-      - "thirdparty/glfw/src/CMakeLists.txt:275 (check_include_file)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "thirdparty/glfw/CMakeLists.txt:60 (find_package)"
     checks:
-      - "Looking for dinput.h"
+      - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b14kz1"
-      binary: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b14kz1"
+      source: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-78mp3j"
+      binary: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-78mp3j"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
     buildResult:
-      variable: "DINPUT_H_FOUND"
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b14kz1'
+        Change Dir: 'C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-78mp3j'
         
-        Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_95531
-        [1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_95531.dir/CheckIncludeFile.c.obj -c C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-b14kz1/CheckIncludeFile.c
-        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_95531.dir/CheckIncludeFile.c.obj -o cmTC_95531.exe -Wl,--out-implib,libcmTC_95531.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_8aaab
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_8aaab.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_8aaab.dir\\ /FS -c C:\\Users\\R├®mi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-78mp3j\\CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_8aaab.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8aaab.dir\\CheckFunctionExists.c.obj  /out:cmTC_8aaab.exe /implib:cmTC_8aaab.lib /pdb:cmTC_8aaab.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_8aaab.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_8aaab.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8aaab.dir\\CheckFunctionExists.c.obj  /out:cmTC_8aaab.exe /implib:cmTC_8aaab.lib /pdb:cmTC_8aaab.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_8aaab.dir\\CheckFunctionExists.c.obj /out:cmTC_8aaab.exe /implib:cmTC_8aaab.lib /pdb:cmTC_8aaab.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_8aaab.dir/intermediate.manifest CMakeFiles\\cmTC_8aaab.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'pthreads.lib'\x0d
+        ninja: build stopped: subcommand failed.
         
-      exitCode: 0
+      exitCode: 1
   -
     kind: "try_compile-v1"
     backtrace:
-      - "C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
-      - "thirdparty/glfw/src/CMakeLists.txt:276 (check_include_file)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "C:/Users/R\u00e9mi/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "thirdparty/glfw/CMakeLists.txt:60 (find_package)"
     checks:
-      - "Looking for xinput.h"
+      - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mqv2vv"
-      binary: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mqv2vv"
+      source: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g5l6in"
+      binary: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g5l6in"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
-      CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_MODULE_PATH: "C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/R\u00e9mi/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/modules"
     buildResult:
-      variable: "XINPUT_H_FOUND"
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mqv2vv'
+        Change Dir: 'C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-g5l6in'
         
-        Run Build Command(s): C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_131f5
-        [1/2] C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_131f5.dir/CheckIncludeFile.c.obj -c C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-mqv2vv/CheckIncludeFile.c
-        [2/2] C:\\windows\\system32\\cmd.exe /C "cd . && C:\\Users\\remi.cazoulat\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_131f5.dir/CheckIncludeFile.c.obj -o cmTC_131f5.exe -Wl,--out-implib,libcmTC_131f5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_b080f
+        [1/2] C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Ob0 /Od /RTC1 -MDd -Zi /showIncludes /FoCMakeFiles\\cmTC_b080f.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_b080f.dir\\ /FS -c C:\\Users\\R├®mi\\Documents\\GitHub\\NucFu\\GLNucFu\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-g5l6in\\CheckFunctionExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b080f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b080f.dir\\CheckFunctionExists.c.obj  /out:cmTC_b080f.exe /implib:cmTC_b080f.lib /pdb:cmTC_b080f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_b080f.exe 
+        C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\R├®mi\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E vs_link_exe --intdir=CMakeFiles\\cmTC_b080f.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100226~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b080f.dir\\CheckFunctionExists.c.obj  /out:cmTC_b080f.exe /implib:cmTC_b080f.lib /pdb:cmTC_b080f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~3\\2022\\COMMUN~1\\VC\\Tools\\MSVC\\1438~1.331\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_b080f.dir\\CheckFunctionExists.c.obj /out:cmTC_b080f.exe /implib:cmTC_b080f.lib /pdb:cmTC_b080f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_b080f.dir/intermediate.manifest CMakeFiles\\cmTC_b080f.dir/manifest.res" failed (exit code 1104) with the following output:
+        LINK : fatal error LNK1104: impossible d'ouvrir le fichier 'pthread.lib'\x0d
+        ninja: build stopped: subcommand failed.
         
-      exitCode: 0
+      exitCode: 1
 ...

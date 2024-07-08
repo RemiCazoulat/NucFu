@@ -60,7 +60,7 @@ void addDensity(const GLuint computeShader, const double x,const double y) {
 }
 
 // Init Window, GLFW and GLAD
-GLFWwindow* initWindow(const int & windowWidth, const int & windowHeight) {
+void initWindow(const int & windowWidth, const int & windowHeight) {
     // Initialize GLFW
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW" << std::endl;
@@ -72,7 +72,7 @@ GLFWwindow* initWindow(const int & windowWidth, const int & windowHeight) {
     // Create variables
 
     // Create a GLFW window
-    GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "OpenGL 2D Fluid", nullptr, nullptr);
+    window = glfwCreateWindow(windowWidth, windowHeight, "OpenGL 2D Fluid", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -82,7 +82,6 @@ GLFWwindow* initWindow(const int & windowWidth, const int & windowHeight) {
     if (!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
         std::cerr << "Failed to initialize OpenGL context" << std::endl;
     }
-    return window;
 }
 
 GLuint createTextureVec2(const GLfloat * data, const int width, const int height) {
@@ -151,12 +150,14 @@ int main() {
     const int windowWidth = pixelPerCell * gridWidth;
     const int windowHeight = pixelPerCell * gridHeight;
     printf("[DEBUG] init window size :  %i %i", windowWidth, windowHeight);
-    GLFWwindow* window = initWindow(windowWidth, windowHeight);
+    initWindow(windowWidth, windowHeight);
     printf("[DEBUG] init window done \n");
 
     // ---------- { Init Textures }----------
     const GLuint velTex = createTextureVec2(vel, gridWidth, gridHeight);
-    const GLuint densTex = createTextureVec1(density, gridWidth, gridHeight);
+    GLuint densTex = createTextureVec1(density, gridWidth, gridHeight);
+    const GLuint densTexTransit = createTextureVec1(density, gridWidth, gridHeight);
+
     printf("[DEBUG] init textures done \n");
 
     // ---------- { Compute program }----------
@@ -184,7 +185,8 @@ int main() {
     // ---------- { Main render loop }----------
     while (!glfwWindowShouldClose(window)) {
 
-        execute(computeProgram, velTex, densTex, gridWidth, gridHeight);
+        execute(computeProgram, densTexTransit, gridWidth, gridHeight);
+        densTex = densTexTransit;
         render(shaderProgram, velTex, densTex);
 
         // Swap buffers and poll for events

@@ -1,9 +1,17 @@
-C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/remi.cazoulat/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu -B C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-debug
+C:\Users\Rémi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/Rémi/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\Rémi\Documents\GitHub\NucFu\GLNucFu -B C:\Users\Rémi\Documents\GitHub\NucFu\GLNucFu\cmake-build-debug
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE  
 -- Including Win32 support
 -- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
 -- Documentation generation requires Doxygen 1.9.8 or later
 -- GLM: Version 1.0.2
 -- GLM: Build with C++ features auto detection
--- Configuring done (0.3s)
+-- Found OpenGL: opengl32   
+-- Configuring done (1.7s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug
+-- Build files have been written to: C:/Users/Rémi/Documents/GitHub/NucFu/GLNucFu/cmake-build-debug

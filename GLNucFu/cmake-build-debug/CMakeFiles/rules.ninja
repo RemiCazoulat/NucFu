@@ -12,12 +12,17 @@
 # =============================================================================
 
 #############################################
+# localized /showIncludes string
+
+msvc_deps_prefix = Remarque�: inclusion du fichier�:  
+
+
+#############################################
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__GLNucFu_unscanned_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -25,7 +30,7 @@ rule CXX_COMPILER__GLNucFu_unscanned_Debug
 # Rule for linking CXX executable.
 
 rule CXX_EXECUTABLE_LINKER__GLNucFu_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\Rémi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E vs_link_exe --intdir=$OBJECT_DIR --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests $MANIFESTS -- C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\link.exe /nologo $in  /out:$TARGET_FILE /implib:$TARGET_IMPLIB /pdb:$TARGET_PDB /version:0.0 $LINK_FLAGS $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
 
@@ -34,9 +39,8 @@ rule CXX_EXECUTABLE_LINKER__GLNucFu_Debug
 # Rule for compiling C files.
 
 rule C_COMPILER__glad_unscanned_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building C object $out
 
 
@@ -44,7 +48,7 @@ rule C_COMPILER__glad_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__glad_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in  && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -61,9 +65,8 @@ rule CUSTOM_COMMAND
 # Rule for compiling C files.
 
 rule C_COMPILER__glfw_unscanned_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building C object $out
 
 
@@ -71,7 +74,7 @@ rule C_COMPILER__glfw_unscanned_Debug
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__glfw_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in  && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -80,9 +83,8 @@ rule C_STATIC_LIBRARY_LINKER__glfw_Debug
 # Rule for compiling CXX files.
 
 rule CXX_COMPILER__glm_unscanned_Debug
-  depfile = $DEP_FILE
-  deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  deps = msvc
+  command = ${LAUNCHER}${CODE_CHECK}C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\cl.exe  /nologo /TP $DEFINES $INCLUDES $FLAGS /showIncludes /Fo$out /Fd$TARGET_COMPILE_PDB /FS -c $in
   description = Building CXX object $out
 
 
@@ -90,7 +92,7 @@ rule CXX_COMPILER__glm_unscanned_Debug
 # Rule for linking CXX static library.
 
 rule CXX_STATIC_LIBRARY_LINKER__glm_Debug
-  command = C:\windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\mingw\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~1\MICROS~3\2022\COMMUN~1\VC\Tools\MSVC\1438~1.331\bin\Hostx64\x64\lib.exe /nologo $LINK_FLAGS /out:$TARGET_FILE $in  && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
 
@@ -99,7 +101,7 @@ rule CXX_STATIC_LIBRARY_LINKER__glm_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu -BC:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-debug
+  command = C:\Users\Rémi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe --regenerate-during-build -SC:\Users\Rémi\Documents\GitHub\NucFu\GLNucFu -BC:\Users\Rémi\Documents\GitHub\NucFu\GLNucFu\cmake-build-debug
   description = Re-running CMake...
   generator = 1
 
@@ -108,7 +110,7 @@ rule RERUN_CMAKE
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe $FILE_ARG -t clean $TARGETS
+  command = C:\Users\Rémi\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -116,6 +118,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = C:\Users\remi.cazoulat\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe -t targets
+  command = C:\Users\Rémi\AppData\Local\Programs\CLion\bin\ninja\win\x64\ninja.exe -t targets
   description = All primary targets available:
 
