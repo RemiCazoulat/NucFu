@@ -8,7 +8,7 @@ layout (r32f, binding = 2) uniform image2D densityTransi;
 
 
 // Variables à passer en uniform
-float k = 0.9;
+float k = 20;
 float timeStep = 0.1;
 
 
@@ -52,33 +52,6 @@ float inversedDiffusion(ivec2 coord) {
     ivec2 size = imageSize(density0);
 
     float currentDens = imageLoad(density0, coord).x;
-    /*
-    float nextLeftDens  = currentDens;
-    float nextRightDens = currentDens;
-    float nextUpDens    = currentDens;
-    float nextDownDens  = currentDens;
-    int total = 0;
-    if (coord.x - 1 >= 0) {
-        total++;
-        ivec2 leftCoord  = ivec2(coord.x - 1, coord.y);
-        nextLeftDens = imageLoad(densityTransi, leftCoord).x;
-    }
-    if (coord.x + 1 < size.x) {
-        total++;
-        ivec2 rightCoord = ivec2(coord.x + 1, coord.y);
-        nextRightDens = imageLoad(densityTransi, rightCoord).x;
-    }
-    if (coord.y - 1 >= 0) {
-        total++;
-        ivec2 upCoord    = ivec2(coord.x, coord.y - 1);
-        nextUpDens = imageLoad(densityTransi, upCoord).x;
-    }
-    if (coord.y + 1 < size.y) {
-        total++;
-        ivec2 downCoord  = ivec2(coord.x, coord.y + 1);
-        nextDownDens = imageLoad(densityTransi, downCoord).x;
-    }
-    */
     ivec2 leftCoord  = clamp(ivec2(coord.x - 1, coord.y), ivec2(0), size - 1);
     ivec2 rightCoord = clamp(ivec2(coord.x + 1, coord.y), ivec2(0), size - 1);
     ivec2 upCoord    = clamp(ivec2(coord.x, coord.y - 1), ivec2(0), size - 1);
@@ -87,7 +60,7 @@ float inversedDiffusion(ivec2 coord) {
     float nextRightDens = imageLoad(densityTransi, rightCoord).x;
     float nextUpDens = imageLoad(densityTransi, upCoord).x;
     float nextDownDens = imageLoad(densityTransi, downCoord).x;
-    float nextDens = (currentDens + k * (nextLeftDens + nextRightDens + nextUpDens + nextDownDens)) / ( 1.0 + 4 * k);
+    float nextDens = (currentDens + k * (nextLeftDens + nextRightDens + nextUpDens + nextDownDens) / 4.0) / ( 1.0 +  k);
     return nextDens;
 }
 
