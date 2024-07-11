@@ -115,9 +115,7 @@ void render(const GLuint & shaderProgram, const GLuint & velTex, const GLuint & 
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, densTex);
     glBindVertexArray(VAO);
-
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-
     glBindVertexArray(0);
     glBindTexture(GL_TEXTURE_2D, 0);
 }

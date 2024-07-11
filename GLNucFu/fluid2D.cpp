@@ -117,13 +117,15 @@ GLuint createTextureVec1(const GLfloat * data, const int width, const int height
 // ---{ N }---
 int main() {
     // Init grid
-    gridWidth = 128 * 2;
-    gridHeight = 72 * 2;
-    pixelPerCell = 8;
-    int gridSize = gridWidth * gridHeight;
-    int gridSizex2 = gridSize * 2;
+    gridWidth = 128 /2;
+    gridHeight = 72 /2;
+    pixelPerCell = 32;
+    const int gridSize = gridWidth * gridHeight;
+    const int gridSizex2 = gridSize * 2;
     auto* vel = new GLfloat[gridSizex2]();
     auto* density = new GLfloat[gridSize]();
+    auto* densityTransi = new GLfloat[gridSize]();
+
     printf("[DEBUG] init arrays \n");
 
     auto circleCoord = glm::vec2(128 / 2, 72 / 8);
@@ -131,7 +133,7 @@ int main() {
     for(int j = 0; j < gridHeight ; j ++) {
         for(int i = 0; i < gridWidth; i ++) {
             const float distance = glm::distance(glm::vec2(i, j), circleCoord);
-            density[(i + j * gridWidth)] = distance < radius ? 1.0 : 0.3;
+            density[(i + j * gridWidth)] = distance < radius ? 1.0 : 0.2;
 
             if( j > gridHeight / 2 - 10 && j < gridHeight / 2 + 10) {
                 vel[(i + j * gridWidth) * 2] = 1.0;
@@ -155,29 +157,32 @@ int main() {
 
     // ---------- { Init Textures }----------
     const GLuint velTex = createTextureVec2(vel, gridWidth, gridHeight);
-    GLuint densTex = createTextureVec1(density, gridWidth, gridHeight);
-    const GLuint densTexTransit = createTextureVec1(density, gridWidth, gridHeight);
+    const GLuint densTex = createTextureVec1(density, gridWidth, gridHeight);
+    const GLuint densTexTransit = createTextureVec1(densityTransi, gridWidth, gridHeight);
 
     printf("[DEBUG] init textures done \n");
 
     // ---------- { Compute program }----------
     const GLuint computeProgram = createComputeProgram("../glsl/cshader.glsl");
-    printf("[DEBUG] init compute done \n");
+    const GLuint computeReplace = createComputeProgram("../glsl/computeReplace.glsl");
 
+    printf("[DEBUG] init compute done \n");
+    //Compute shader that will calculate the new density and velocity using the old values
     glUseProgram(computeProgram);
     glBindImageTexture (0, velTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_RG32F);
     glBindImageTexture (1, densTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+    glBindImageTexture (2, densTexTransit, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
 
-    //glUseProgram(computeProgram);
-    //bindingUniformTex(computeProgram, velTex, "velTex", 0);
-    //bindingUniformTex(computeProgram, densTex, "densTex", 1);
+    // Compute shader that will swap the old and new values while reinit the old values to 0
+    glUseProgram(computeReplace);
+    glBindImageTexture (0, densTexTransit, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+    glBindImageTexture (1, densTex, 0, GL_FALSE, 0, GL_READ_WRITE, GL_R32F);
+
+
     // ---------- { Shader program }----------
     createGeometry();
     const GLuint shaderProgram = createShaderProgram("../glsl/vshader.glsl","../glsl/fshader.glsl");
     glUseProgram(shaderProgram);
-    createUniform1f(shaderProgram, "gridWidth", gridWidth);
-    createUniform1f(shaderProgram, "gridHeight", gridHeight);
-    createUniform1f(shaderProgram, "pixelPerCell", pixelPerCell);
     bindingUniformTex(shaderProgram, "velTex", 0);
     bindingUniformTex(shaderProgram, "densTex", 1);
     printf("[DEBUG] init shader done \n");
@@ -185,8 +190,17 @@ int main() {
     // ---------- { Main render loop }----------
     while (!glfwWindowShouldClose(window)) {
 
-        execute(computeProgram, densTexTransit, gridWidth, gridHeight);
-        densTex = densTexTransit;
+        glUseProgram(computeProgram);
+        for(int i = 0; i < 20; i ++) {
+            glDispatchCompute(gridWidth / 64,gridHeight / 1,1);
+            glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+        }
+
+        glUseProgram(computeReplace);
+        glDispatchCompute(gridWidth / 64,gridHeight / 1,1);
+        glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+
+
         render(shaderProgram, velTex, densTex);
 
         // Swap buffers and poll for events

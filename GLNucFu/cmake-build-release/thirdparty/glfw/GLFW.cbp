@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="GLFW"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\thirdparty\;CMake Files\thirdparty\glfw\;CMake Files\thirdparty\glfw\CMake\;CMake Files\thirdparty\glfw\src\;CMake Files\thirdparty\glfw\docs\;CMake Files\thirdparty\glm\;CMake Files\thirdparty\glm\glm\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="uninstall">
+				<Option working_dir="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 uninstall"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw">
+				<Option output="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_GLFW_WIN32"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/include"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 glfw"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="glfw/fast">
+				<Option output="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src/glfw3.lib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add option="-D_GLFW_WIN32"/>
+					<Add option="-DUNICODE"/>
+					<Add option="-D_UNICODE"/>
+					<Add option="-D_CRT_SECURE_NO_WARNINGS"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/include"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src"/>
+					<Add directory="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.40.33807\ATLMFC\include"/>
+					<Add directory="C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\VS\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\\include\10.0.22621.0\\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 glfw/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="update_mappings">
+				<Option working_dir="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/cmake-build-release/thirdparty/glfw/src"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 update_mappings"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\remi.cazoulat\Documents\GitHub\NucFu\GLNucFu\cmake-build-release\thirdparty\glfw\src\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/GenerateMappings.cmake">
+			<Option target="update_mappings"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/include/GLFW/glfw3.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/include/GLFW/glfw3native.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/egl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/input.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/internal.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/mappings.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/mappings.h.in">
+			<Option target="update_mappings"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/null_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/osmesa_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/platform.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/vulkan.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/wgl_context.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_init.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_joystick.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_joystick.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_module.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_monitor.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_platform.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_thread.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_thread.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_time.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_time.h">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/win32_window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/window.c">
+			<Option target="glfw"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/cmake_uninstall.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/glfw3.pc.in">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/CMake/glfw3Config.cmake.in">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\CMake\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\src\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glfw/docs/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glfw\docs\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glm\"/>
+		</Unit>
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/thirdparty/glm/glm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\thirdparty\glm\glm\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
