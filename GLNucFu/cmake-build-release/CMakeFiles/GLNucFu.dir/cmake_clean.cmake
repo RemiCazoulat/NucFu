@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GLNucFu.dir/compute.cpp.obj"
   "CMakeFiles/GLNucFu.dir/compute.cpp.obj.d"
-  "CMakeFiles/GLNucFu.dir/fluid2D.cpp.obj"
-  "CMakeFiles/GLNucFu.dir/fluid2D.cpp.obj.d"
+  "CMakeFiles/GLNucFu.dir/matrixTesterCPU.cpp.obj"
+  "CMakeFiles/GLNucFu.dir/matrixTesterCPU.cpp.obj.d"
   "CMakeFiles/GLNucFu.dir/shader.cpp.obj"
   "CMakeFiles/GLNucFu.dir/shader.cpp.obj.d"
   "GLNucFu.exe"

@@ -4,12 +4,13 @@ project(GLNucFu)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(GLNucFu
-        fluid2D.cpp
+        matrixTesterCPU.cpp
         shader.h
         compute.h
         compute.cpp
         includes.h
         shader.cpp
+        matrixTesterCPU.cpp
 )
 
 add_subdirectory(thirdparty/glfw)

@@ -240,29 +240,29 @@ compute.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\compute.cpp.s
 .PHONY : compute.cpp.s
 
-fluid2D.obj: fluid2D.cpp.obj
-.PHONY : fluid2D.obj
+matrixTesterCPU.obj: matrixTesterCPU.cpp.obj
+.PHONY : matrixTesterCPU.obj
 
 # target to build an object file
-fluid2D.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\fluid2D.cpp.obj
-.PHONY : fluid2D.cpp.obj
+matrixTesterCPU.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\matrixTesterCPU.cpp.obj
+.PHONY : matrixTesterCPU.cpp.obj
 
-fluid2D.i: fluid2D.cpp.i
-.PHONY : fluid2D.i
+matrixTesterCPU.i: matrixTesterCPU.cpp.i
+.PHONY : matrixTesterCPU.i
 
 # target to preprocess a source file
-fluid2D.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\fluid2D.cpp.i
-.PHONY : fluid2D.cpp.i
+matrixTesterCPU.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\matrixTesterCPU.cpp.i
+.PHONY : matrixTesterCPU.cpp.i
 
-fluid2D.s: fluid2D.cpp.s
-.PHONY : fluid2D.s
+matrixTesterCPU.s: matrixTesterCPU.cpp.s
+.PHONY : matrixTesterCPU.s
 
 # target to generate assembly for a file
-fluid2D.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\fluid2D.cpp.s
-.PHONY : fluid2D.cpp.s
+matrixTesterCPU.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\matrixTesterCPU.cpp.s
+.PHONY : matrixTesterCPU.cpp.s
 
 shader.obj: shader.cpp.obj
 .PHONY : shader.obj
@@ -332,9 +332,9 @@ help:
 	@echo ... compute.obj
 	@echo ... compute.i
 	@echo ... compute.s
-	@echo ... fluid2D.obj
-	@echo ... fluid2D.i
-	@echo ... fluid2D.s
+	@echo ... matrixTesterCPU.obj
+	@echo ... matrixTesterCPU.i
+	@echo ... matrixTesterCPU.s
 	@echo ... shader.obj
 	@echo ... shader.i
 	@echo ... shader.s

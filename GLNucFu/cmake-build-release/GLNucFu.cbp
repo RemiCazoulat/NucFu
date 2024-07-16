@@ -302,10 +302,10 @@
 		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/compute.h">
 			<Option target="GLNucFu"/>
 		</Unit>
-		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/fluid2D.cpp">
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/includes.h">
 			<Option target="GLNucFu"/>
 		</Unit>
-		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/includes.h">
+		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/matrixTesterCPU.cpp">
 			<Option target="GLNucFu"/>
 		</Unit>
 		<Unit filename="C:/Users/remi.cazoulat/Documents/GitHub/NucFu/GLNucFu/shader.cpp">
