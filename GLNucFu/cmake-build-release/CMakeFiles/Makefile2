@@ -154,8 +154,8 @@ thirdparty\glm\glm\clean: thirdparty\glm\glm\CMakeFiles\glm.dir\clean
 # Target rules for target CMakeFiles/GLNucFu.dir
 
 # All Build rule for target.
-CMakeFiles\GLNucFu.dir\all: CMakeFiles\glad.dir\all
 CMakeFiles\GLNucFu.dir\all: thirdparty\glfw\src\CMakeFiles\glfw.dir\all
+CMakeFiles\GLNucFu.dir\all: CMakeFiles\glad.dir\all
 CMakeFiles\GLNucFu.dir\all: thirdparty\glm\glm\CMakeFiles\glm.dir\all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GLNucFu.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\GLNucFu.dir\build
